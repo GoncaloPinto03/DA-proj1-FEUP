@@ -8,7 +8,8 @@
 
 int main() {
     vector<Network> networks;
-    read_files::read_network(networks);
-    //read_files::print_networks(networks);
+    read_files::read_networks(networks);
+    vector<Station> stations;
+    read_files::read_stations(stations);
     return 0;
 }
