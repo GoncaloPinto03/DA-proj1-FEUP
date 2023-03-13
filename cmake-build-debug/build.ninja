@@ -18,7 +18,7 @@
 #############################################
 # Minimal version of Ninja required by this file
 
-ninja_required_version = 1.5
+ninja_required_version = 1.8
 
 
 #############################################
@@ -41,6 +41,55 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target DATA_STRUCTURES
+
+
+#############################################
+# Order-only phony target for DATA_STRUCTURES
+
+build cmake_object_order_depends_target_DATA_STRUCTURES: phony || CMakeFiles/DATA_STRUCTURES.dir
+
+build CMakeFiles/DATA_STRUCTURES.dir/data_structures/Graph.cpp.o: CXX_COMPILER__DATA_STRUCTURES_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/data_structures/Graph.cpp || cmake_object_order_depends_target_DATA_STRUCTURES
+  DEP_FILE = CMakeFiles/DATA_STRUCTURES.dir/data_structures/Graph.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DATA_STRUCTURES.dir
+  OBJECT_FILE_DIR = CMakeFiles/DATA_STRUCTURES.dir/data_structures
+
+build CMakeFiles/DATA_STRUCTURES.dir/data_structures/Heap.cpp.o: CXX_COMPILER__DATA_STRUCTURES_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/data_structures/Heap.cpp || cmake_object_order_depends_target_DATA_STRUCTURES
+  DEP_FILE = CMakeFiles/DATA_STRUCTURES.dir/data_structures/Heap.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DATA_STRUCTURES.dir
+  OBJECT_FILE_DIR = CMakeFiles/DATA_STRUCTURES.dir/data_structures
+
+build CMakeFiles/DATA_STRUCTURES.dir/data_structures/UFDS.cpp.o: CXX_COMPILER__DATA_STRUCTURES_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/data_structures/UFDS.cpp || cmake_object_order_depends_target_DATA_STRUCTURES
+  DEP_FILE = CMakeFiles/DATA_STRUCTURES.dir/data_structures/UFDS.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DATA_STRUCTURES.dir
+  OBJECT_FILE_DIR = CMakeFiles/DATA_STRUCTURES.dir/data_structures
+
+build CMakeFiles/DATA_STRUCTURES.dir/data_structures/VertexEdge.cpp.o: CXX_COMPILER__DATA_STRUCTURES_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/data_structures/VertexEdge.cpp || cmake_object_order_depends_target_DATA_STRUCTURES
+  DEP_FILE = CMakeFiles/DATA_STRUCTURES.dir/data_structures/VertexEdge.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DATA_STRUCTURES.dir
+  OBJECT_FILE_DIR = CMakeFiles/DATA_STRUCTURES.dir/data_structures
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target DATA_STRUCTURES
+
+
+#############################################
+# Link the static library libDATA_STRUCTURES.a
+
+build libDATA_STRUCTURES.a: CXX_STATIC_LIBRARY_LINKER__DATA_STRUCTURES_Debug CMakeFiles/DATA_STRUCTURES.dir/data_structures/Graph.cpp.o CMakeFiles/DATA_STRUCTURES.dir/data_structures/Heap.cpp.o CMakeFiles/DATA_STRUCTURES.dir/data_structures/UFDS.cpp.o CMakeFiles/DATA_STRUCTURES.dir/data_structures/VertexEdge.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/DATA_STRUCTURES.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libDATA_STRUCTURES.a
+  TARGET_PDB = DATA_STRUCTURES.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target PROJ1
 
 
@@ -55,6 +104,24 @@ build CMakeFiles/PROJ1.dir/Tests/main.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpi
   OBJECT_DIR = CMakeFiles/PROJ1.dir
   OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
 
+build CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/read_files.cpp || cmake_object_order_depends_target_PROJ1
+  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/PROJ1.dir
+  OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
+
+build CMakeFiles/PROJ1.dir/Tests/station.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/station.cpp || cmake_object_order_depends_target_PROJ1
+  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/station.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/PROJ1.dir
+  OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
+
+build CMakeFiles/PROJ1.dir/Tests/network.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/network.cpp || cmake_object_order_depends_target_PROJ1
+  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/network.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/PROJ1.dir
+  OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PROJ1
@@ -63,7 +130,7 @@ build CMakeFiles/PROJ1.dir/Tests/main.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpi
 #############################################
 # Link the executable PROJ1
 
-build PROJ1: CXX_EXECUTABLE_LINKER__PROJ1_Debug CMakeFiles/PROJ1.dir/Tests/main.cpp.o
+build PROJ1: CXX_EXECUTABLE_LINKER__PROJ1_Debug CMakeFiles/PROJ1.dir/Tests/main.cpp.o CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o CMakeFiles/PROJ1.dir/Tests/station.cpp.o CMakeFiles/PROJ1.dir/Tests/network.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/PROJ1.dir
   POST_BUILD = :
@@ -97,6 +164,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build DATA_STRUCTURES: phony libDATA_STRUCTURES.a
+
 # =============================================================================
 # Folder targets.
 
@@ -105,23 +174,37 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug
 
-build all: phony PROJ1
+build all: phony libDATA_STRUCTURES.a PROJ1
 
 # =============================================================================
 # Built-in targets
 
 
 #############################################
+# Phony target to force glob verification run.
+
+build /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force: phony
+
+
+#############################################
+# Re-run CMake to check if globbed directories changed.
+
+build /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force
+  pool = console
+  restat = 1
+
+
+#############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/CMakeLists.txt /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs | /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/CMakeLists.txt /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/CMakeLists.txt /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/CMakeLists.txt /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /snap/clion/229/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

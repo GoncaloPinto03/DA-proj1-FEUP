@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "PROJ1",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "DATA_STRUCTURES::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DATA_STRUCTURES-Debug-9f8e6dd81ad79aa4c74c.json",
+					"name" : "DATA_STRUCTURES",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "PROJ1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PROJ1-Debug-d2648687050b0bde3f0d.json",
+					"jsonFile" : "target-PROJ1-Debug-9c9847803b7b5fe28908.json",
 					"name" : "PROJ1",
 					"projectIndex" : 0
 				}

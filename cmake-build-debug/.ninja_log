@@ -1,3 +1,4 @@
 # ninja log v5
-0	180	1678728685442343717	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
 181	248	1678728685510343337	PROJ1	19ed2998d0c0cf1b
+0	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	180	1678728685442343717	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
