@@ -4,8 +4,11 @@
 
 #include "main.h"
 #include <iostream>
+#include "read_files.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    vector<Network> networks;
+    read_files::read_network(networks);
+    //read_files::print_networks(networks);
     return 0;
 }

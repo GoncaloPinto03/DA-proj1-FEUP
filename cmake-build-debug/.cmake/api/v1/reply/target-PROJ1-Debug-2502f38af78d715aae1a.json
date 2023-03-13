@@ -123,23 +123,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/station.cpp",
+			"path" : "Tests/Station.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Tests/station.h",
+			"path" : "Tests/Station.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/network.cpp",
+			"path" : "Tests/Network.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Tests/network.h",
+			"path" : "Tests/Network.h",
 			"sourceGroupIndex" : 1
 		}
 	],

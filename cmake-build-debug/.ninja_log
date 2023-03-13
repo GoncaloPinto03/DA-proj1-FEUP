@@ -1,4 +1,40 @@
 # ninja log v5
 181	248	1678728685510343337	PROJ1	19ed2998d0c0cf1b
-0	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
 0	180	1678728685442343717	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
+4	22	1678731717543045012	build.ninja	aa8ecf91d05f5c78
+0	2	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	195	1678731717743044846	CMakeFiles/PROJ1.dir/Tests/Station.cpp.o	2330e6ebdb41efd7
+1	196	1678731717747044843	CMakeFiles/PROJ1.dir/Tests/Network.cpp.o	63cf4b54ce1b37fc
+1	248	1678731717795044803	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
+1	264	1678731717811044790	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+264	327	1678731717875044737	PROJ1	2e6e90c8721ea3e9
+0	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	258	1678731735055030612	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+259	324	1678731735119030560	PROJ1	2e6e90c8721ea3e9
+0	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	251	1678731876637554042	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+251	317	1678731876701553421	PROJ1	2e6e90c8721ea3e9
+1	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	244	1678731899065340037	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+244	311	1678731899129339438	PROJ1	2e6e90c8721ea3e9
+0	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	5	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	3	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	225	1678732180111188713	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+0	238	1678732180123188638	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
+238	304	1678732180187188240	PROJ1	2e6e90c8721ea3e9
+0	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	2	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+0	248	1678732268394670514	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+248	313	1678732268458670160	PROJ1	2e6e90c8721ea3e9
+0	4	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	236	1678732479009641781	CMakeFiles/PROJ1.dir/Tests/main.cpp.o	399d71f51019e55d
+1	250	1678732479025641712	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+250	316	1678732479089641436	PROJ1	2e6e90c8721ea3e9
+0	2	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4
+1	258	1678732483381622963	CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o	24664a9fb39a269b
+258	329	1678732483453622654	PROJ1	2e6e90c8721ea3e9
+0	2	0	/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/cmake.verify_globs	9346fce246ce71d4

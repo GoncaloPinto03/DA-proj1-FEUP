@@ -8,8 +8,11 @@ using namespace std;
 #define PROJ1_STATION_H
 
 
-class station {
+class Station {
 public:
+    Station();
+    Station(string name, string district, string municipality, string township, string line);
+
     string get_name() const;
     void set_name(string nName);
     string get_district() const;
@@ -21,7 +24,6 @@ public:
     string get_line() const;
     void set_line(string nLine);
 
-    station(string name, string district, string municipality, string township, string line);
 private:
     string name;
     string district;

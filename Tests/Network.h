@@ -8,8 +8,10 @@ using namespace std;
 #define PROJ1_NETWORK_H
 
 
-class network {
+class Network {
 public:
+    Network(string stationA, string stationB, int capacity, string service);
+
     string get_stationA() const;
     void set_stationA(string nStationA);
     string get_stationB() const;
@@ -19,7 +21,6 @@ public:
     string get_service() const;
     void set_service(string nService);
 
-    network( string stationA, string stationB, int capacity, string service);
 private:
     string stationA;
     string stationB;
