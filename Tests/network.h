@@ -15,7 +15,7 @@ public:
     string get_stationB() const;
     void set_stationB(string nStationB);
     int get_capacity() const;
-    void set_capacity(string nCapacity);
+    void set_capacity(int nCapacity);
     string get_service() const;
     void set_service(string nService);
 
