@@ -4,28 +4,23 @@
 
 #include "read_files.h"
 
-void read_files::read_network(vector<Network> networks) {
-    string stationA;
-    string stationB;
-    int capacity;
-    string service;
-    string dummy;
+void read_files::read_network(vector<Network>& networks) {
+    ifstream input("../dataset/network.csv");
+    if (!input.is_open()) {
+        cout << "ERROR: Failed to open network file" << endl;
+        return;
+    }
 
-    ifstream input;
-    input.open("../dataset/network.csv");
-    if (input.is_open()) {
-        getline(input, dummy);
-        string l;
-        getline(input, l);
-        while (input >> stationA >> stationB >> capacity >> service) {
-            cout << l << endl;
-            Network network(stationA, stationB, capacity, service);
-            networks.push_back(network);
-        }
+    string dummy;
+    getline(input, dummy); // Skip header row
+
+    string stationA, stationB, service;
+    int capacity;
+    while (input >> stationA >> stationB >> capacity >> service) {
+        Network network(stationA, stationB, capacity, service);
+        networks.push_back(network);
     }
-    else {
-        cout << "ERROR: File Not Open" << '\n';
-    }
+
     input.close();
 }
 

@@ -1,4 +1,0 @@
-/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/DATA_STRUCTURES.dir
-/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/PROJ1.dir
-/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
