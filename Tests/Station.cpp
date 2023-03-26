@@ -1,8 +1,12 @@
-//
-// Created by gpinto03 on 13-03-2023.
-//
-
 #include "Station.h"
+
+Station::Station(string name, string district, string municipality, string township, string line) {
+    this->name = name;
+    this->district = district;
+    this->municipality = municipality;
+    this->township = township;
+    this->line = line;
+}
 
 string Station::get_name() const {
     return name;
@@ -42,13 +46,5 @@ string Station::get_line() const {
 
 void Station::set_line(string nLine) {
     this->line = nLine;
-}
-
-Station::Station(string name, string district, string municipality, string township, string line) {
-    this->name = name;
-    this->district = district;
-    this->municipality = municipality;
-    this->township = township;
-    this->line = line;
 }
 
