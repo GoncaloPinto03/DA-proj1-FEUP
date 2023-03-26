@@ -1,11 +1,18 @@
 #include <iostream>
-#include "main.h"
+#include "Menu.h"
 #include "read_files.h"
+
 using namespace std;
 
 int main() {
     vector<Network> networks;
-    read_network(networks);
-    print_networks(networks);
+    vector<Station> stations;
+    read_files::read_networks(networks);
+    read_files::read_stations(stations);
+    Menu menu;
+    bool run = true;
+    while (run) {
+        run = menu.nextState(networks, stations);
+    }
     return 0;
 }

@@ -1,0 +1,4 @@
+/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles/DATA_STRUCTURES.dir
+/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles/PROJ1.dir
+/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
