@@ -1,6 +1,3 @@
-// By: Gonçalo Leão
-// Based on MutablePriorityQueue.h
-
 #include "Heap.h"
 
 // Index calculations

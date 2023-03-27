@@ -1,5 +1,3 @@
-// By: Gonçalo Leão
-
 #ifndef DA_TP_CLASSES_GRAPH
 #define DA_TP_CLASSES_GRAPH
 

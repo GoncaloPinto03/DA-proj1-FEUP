@@ -106,18 +106,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/main.cpp",
+			"path" : "Tests/Main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/read_files.cpp",
+			"path" : "Tests/Read_Files.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Tests/read_files.h",
+			"path" : "Tests/Read_Files.h",
 			"sourceGroupIndex" : 1
 		},
 		{

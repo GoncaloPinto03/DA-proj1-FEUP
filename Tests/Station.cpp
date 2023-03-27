@@ -1,7 +1,3 @@
-//
-// Created by gpinto03 on 13-03-2023.
-//
-
 #include "Station.h"
 
 string Station::get_name() const {
@@ -51,4 +47,3 @@ Station::Station(string name, string district, string municipality, string towns
     this->township = township;
     this->line = line;
 }
-

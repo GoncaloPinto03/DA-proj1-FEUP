@@ -98,14 +98,14 @@ build libDATA_STRUCTURES.a: CXX_STATIC_LIBRARY_LINKER__DATA_STRUCTURES_Debug CMa
 
 build cmake_object_order_depends_target_PROJ1: phony || CMakeFiles/PROJ1.dir
 
-build CMakeFiles/PROJ1.dir/Tests/main.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/main.cpp || cmake_object_order_depends_target_PROJ1
-  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/main.cpp.o.d
+build CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/Main.cpp || cmake_object_order_depends_target_PROJ1
+  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/Main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/PROJ1.dir
   OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
 
-build CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/read_files.cpp || cmake_object_order_depends_target_PROJ1
-  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o.d
+build CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.o: CXX_COMPILER__PROJ1_Debug /home/gpinto03/FEUP/2º$ Ano/2º$ Semestre/Desenho$ de$ Algoritmos/Proj1DA/Tests/Read_Files.cpp || cmake_object_order_depends_target_PROJ1
+  DEP_FILE = CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/PROJ1.dir
   OBJECT_FILE_DIR = CMakeFiles/PROJ1.dir/Tests
@@ -130,7 +130,7 @@ build CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: CXX_COMPILER__PROJ1_Debug /home/
 #############################################
 # Link the executable PROJ1
 
-build PROJ1: CXX_EXECUTABLE_LINKER__PROJ1_Debug CMakeFiles/PROJ1.dir/Tests/main.cpp.o CMakeFiles/PROJ1.dir/Tests/read_files.cpp.o CMakeFiles/PROJ1.dir/Tests/Station.cpp.o CMakeFiles/PROJ1.dir/Tests/Network.cpp.o
+build PROJ1: CXX_EXECUTABLE_LINKER__PROJ1_Debug CMakeFiles/PROJ1.dir/Tests/Main.cpp.o CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.o CMakeFiles/PROJ1.dir/Tests/Station.cpp.o CMakeFiles/PROJ1.dir/Tests/Network.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/PROJ1.dir
   POST_BUILD = :

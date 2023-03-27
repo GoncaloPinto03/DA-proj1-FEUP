@@ -1,7 +1,3 @@
-//
-// Created by gpinto03 on 13-03-2023.
-//
-
 #include "Network.h"
 
 Network::Network(string stationA, string stationB, int capacity, string service) {

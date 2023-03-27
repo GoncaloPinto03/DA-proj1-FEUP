@@ -1,6 +1,3 @@
-//
-// Created by gpinto03 on 13-03-2023.
-//
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -15,7 +12,7 @@ using namespace std;
 
 
 
-class read_files {
+class Read_Files {
 public:
     static void read_networks(vector<Network> networks);
     static void read_stations(vector<Station> stations);

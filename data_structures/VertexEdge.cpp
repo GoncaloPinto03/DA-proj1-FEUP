@@ -1,5 +1,3 @@
-// By: Gonçalo Leão
-
 #include "VertexEdge.h"
 
 /************************* Vertex  **************************/

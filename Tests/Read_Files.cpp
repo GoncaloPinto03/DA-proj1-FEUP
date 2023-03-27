@@ -1,10 +1,6 @@
-//
-// Created by gpinto03 on 13-03-2023.
-//
+#include "Read_Files.h"
 
-#include "read_files.h"
-
-void read_files::read_networks(vector<Network> networks) {
+void Read_Files::read_networks(vector<Network> networks) {
     string stationA;
     string stationB;
     string capacity_str;
@@ -34,13 +30,13 @@ void read_files::read_networks(vector<Network> networks) {
     networks.pop_back();
 }
 
-void read_files::print_networks(vector<Network> networks) {
+void Read_Files::print_networks(vector<Network> networks) {
     for (auto &i : networks) {
         cout << i.get_stationA() << ", " << i.get_stationB() << ", " << i.get_capacity() << ", " << i.get_service() << endl;
     }
 }
 
-void read_files::read_stations(vector<Station> stations) {
+void Read_Files::read_stations(vector<Station> stations) {
     string name;
     string district;
     string municipality;
@@ -70,7 +66,7 @@ void read_files::read_stations(vector<Station> stations) {
     stations.pop_back();
 }
 
-void read_files::print_stations(vector<Station> stations) {
+void Read_Files::print_stations(vector<Station> stations) {
     for (auto &i : stations) {
         cout << i.get_name() << ", " << i.get_district() << ", " << i.get_municipality() << ", " << i.get_township() << ", " << i.get_line() << endl;
     }

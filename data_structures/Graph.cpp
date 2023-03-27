@@ -1,5 +1,3 @@
-// By: Gonçalo Leão
-
 #include "Graph.h"
 
 int Graph::getNumVertex() const {

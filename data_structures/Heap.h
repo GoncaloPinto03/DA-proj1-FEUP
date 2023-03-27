@@ -1,6 +1,3 @@
-// By: Gonçalo Leão
-// Based on MutablePriorityQueue.h
-
 #ifndef DA_TP_CLASSES_HEAP
 #define DA_TP_CLASSES_HEAP
 

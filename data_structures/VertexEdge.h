@@ -1,5 +1,3 @@
-// By: Gonçalo Leão
-
 #ifndef DA_TP_CLASSES_VERTEX_EDGE
 #define DA_TP_CLASSES_VERTEX_EDGE
 
@@ -42,6 +40,7 @@ public:
     friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
+    Station station;       // each vertex has a Station
     std::vector<Edge *> adj;  // outgoing edges
 
     // auxiliary fields
