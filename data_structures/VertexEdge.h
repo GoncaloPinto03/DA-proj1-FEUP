@@ -26,6 +26,7 @@ public:
     std::vector<Edge *> getAdj() const;
     bool isVisited() const;
     bool isProcessing() const;
+    Edge* addEdge(Vertex* dest, int weight, const std::string& service);
     unsigned int getIndegree() const;
     double getDist() const;
     Edge *getPath() const;
@@ -39,10 +40,12 @@ public:
     void setDist(double dist);
     void setPath(Edge *path);
     void setBlock();
-    Edge * addEdge(Vertex *dest, double w);
     bool removeEdge(int destID);
 
     friend class MutablePriorityQueue<Vertex>;
+
+    Edge *addEdge(Vertex *d, double w, const std::string &service);
+
 protected:
     int id;                // identifier
     std::vector<Edge *> adj;  // outgoing edges
@@ -59,6 +62,7 @@ protected:
     int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
 
     bool blocked = false;
+
 };
 
 /********************** Edge  ****************************/
@@ -74,7 +78,6 @@ public:
     Vertex * getOrig() const;
     Edge *getReverse() const;
     double getFlow() const;
-
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
     void setFlow(double flow);

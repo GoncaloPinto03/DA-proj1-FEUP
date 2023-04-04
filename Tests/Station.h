@@ -6,19 +6,59 @@ using namespace std;
 
 class Station {
 public:
-    Station();
-    Station(string name, string district, string municipality, string township, string line);
+public:
 
-    string get_name() const;
-    string get_district() const;
-    string get_municipality() const;
-    string get_township() const;
-    string get_line() const;
-    void set_name(string nName);
-    void set_district(string nDistrict);
-    void set_municipality(string nMunicipality);
-    void set_township(string nTownship);
-    void set_line(string nLine);
+    Station();
+
+    Station(const string &name, const string &district, const string &municipality, const string &township,
+            const string &line);
+
+/**
+     * @brief Get the station name
+     *
+     * @return std::string stationName
+     */
+    std::string get_name() const;
+
+    /**
+     * @brief Get the station district
+     *
+     * @return std::string stationDistrict
+     */
+    std::string get_district() const;
+
+    /**
+     * @brief Get the station municipality
+     *
+     * @return std::string stationMunicipality
+     */
+    std::string get_municipality() const;
+
+    /**
+     * @brief Get the station township
+     *
+     * @return std::string stationTownship
+     */
+    std::string get_township() const;
+
+    /**
+     * @brief Get the stationLine
+     *
+     * @return std::string stationLine
+     */
+    std::string get_line() const;
+
+    /**
+     * @brief Checks stations equality
+     *
+     * @param other station
+     * @return true are the same station
+     * @return false are not the same station
+     */
+    bool operator==(const Station& other) const;
+
+
+
 
 private:
     string name;

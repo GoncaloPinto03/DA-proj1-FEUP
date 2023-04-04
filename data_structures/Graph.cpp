@@ -1,9 +1,5 @@
 #include "Graph.h"
 
-int Graph::getNumVertex() const {
-    return vertexSet.size();
-}
-
 std::vector<Vertex *> Graph::getVertexSet() const {
     return vertexSet;
 }
@@ -43,26 +39,29 @@ bool Graph::addVertex(const int &id) {
  * destination vertices and the edge weight (w).
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
-bool Graph::addEdge(const int &sourc, const int &dest, double w) {
+bool Graph::addEdge(const int &sourc, const int &dest, double w, std::string &service) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    v1->addEdge(v2, w);
+    v1->addEdge(v2, w, service);
     return true;
 }
 
-bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w) {
+
+
+bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w, const std::string &service) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    auto e1 = v1->addEdge(v2, w);
-    auto e2 = v2->addEdge(v1, w);
+    auto e1 = v1->addEdge(v2, w, service);
+    auto e2 = v2->addEdge(v1, w, service);
     e1->setReverse(e2);
     e2->setReverse(e1);
     return true;
 }
+
 
 void deleteMatrix(int **m, int n) {
     if (m != nullptr) {
@@ -82,7 +81,74 @@ void deleteMatrix(double **m, int n) {
     }
 }
 
-Graph::~Graph() {
+
+Graph::Graph() {
     deleteMatrix(distMatrix, vertexSet.size());
     deleteMatrix(pathMatrix, vertexSet.size());
 }
+
+
+int Graph::edKarp(int source, int target) const {
+    auto s = findVertex(source);
+    auto t = findVertex(target);
+
+    // Check if source and destination are valid
+    if (s == nullptr || t == nullptr || s == t) {
+        return -1;
+    }
+
+    // Reset the flow in the edges
+    for (auto v: vertexSet) {
+        for (auto e: v->getAdj()) {
+            e->setFlow(0);
+        }
+    }
+
+    double max_flow = 0;
+
+    while(find_augmentigPath(s,t)){
+
+    }
+}
+
+
+
+bool Graph:: find_augmentigPath(Vertex *sourc, Vertex *dest) const{
+
+    std::queue<Vertex *> queue;
+    for(auto v : vertexSet){
+        v->setVisited(false);
+        v->setPath(nullptr);
+        for(auto e : v->getAdj()){
+            delete e->getReverse();
+            e->setReverse(nullptr);
+        }
+    }
+    while (!queue.empty() && !dest->isVisited()) {
+        auto v = queue.front(); queue.pop();
+
+        for (auto e: v->getAdj()) {
+            auto w = e->getDest();
+            if (!w->isVisited() && e->getWeight() - e->getFlow() > 0) {
+                w->setVisited(true);
+                w->setPath(e);
+                queue.push(w);
+            }
+        }
+
+        for (auto e: v->getIncoming()) {
+            auto w = e->getOrig();
+            if (!w->isVisited() && e->getFlow() > 0) {
+                w->setVisited(true);
+                w->setPath(e);
+                queue.push(w);
+            }
+        }
+    }
+    return dest->isVisited();
+}
+
+int Graph::getNumVertex() const{
+    return this->vertexSet.size();
+}
+

@@ -1,49 +1,36 @@
+
 #include "Station.h"
 
-Station::Station(string name, string district, string municipality, string township, string line) {
-    this->name = name;
-    this->district = district;
-    this->municipality = municipality;
-    this->township = township;
-    this->line = line;
+Station::Station(){}
+
+Station::Station(
+        const std::string& name,
+        const std::string& district,
+        const std::string& municipality,
+        const std::string& township,
+        const std::string& line
+): name(name), district(district), municipality(municipality), township(township), line(line) {}
+
+std::string Station::get_name() const {
+    return this->name;
 }
 
-string Station::get_name() const {
-    return name;
+std::string Station::get_district() const {
+    return this->district;
 }
 
-void Station::set_name(string nName) {
-    this->name = nName;
+std::string Station::get_municipality() const {
+    return this->municipality;
 }
 
-string Station::get_district() const {
-    return district;
+std::string Station::get_township() const {
+    return this->township;
 }
 
-void Station::set_district(string nDistrict) {
-    this->district = nDistrict;
+std::string Station::get_line() const {
+    return this->line;
 }
 
-string Station::get_municipality() const {
-    return municipality;
-}
-
-void Station::set_municipality(string nMunicipality) {
-    this->municipality = nMunicipality;
-}
-
-string Station::get_township() const {
-    return township;
-}
-
-void Station::set_township(string nTownship) {
-    this->township = nTownship;
-}
-
-string Station::get_line() const {
-    return line;
-}
-
-void Station::set_line(string nLine) {
-    this->line = nLine;
+bool Station::operator==(const Station& other) const {
+    return this->name == other.name;
 }

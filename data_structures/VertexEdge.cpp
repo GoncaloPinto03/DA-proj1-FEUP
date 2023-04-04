@@ -13,12 +13,14 @@ Vertex::Vertex() {
  * Auxiliary function to add an outgoing edge to a vertex (this),
  * with a given destination vertex (d) and edge weight (w).
  */
-Edge * Vertex::addEdge(Vertex *d, double w) {
+Edge * Vertex::addEdge(Vertex *d, double w, const std::string &service) {
     auto newEdge = new Edge(this, d, w);
     adj.push_back(newEdge);
     d->incoming.push_back(newEdge);
     return newEdge;
 }
+
+
 
 /*
  * Auxiliary function to remove an outgoing edge (with a given destination (d))
