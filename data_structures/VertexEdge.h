@@ -1,3 +1,5 @@
+
+
 #ifndef DA_TP_CLASSES_VERTEX_EDGE
 #define DA_TP_CLASSES_VERTEX_EDGE
 
@@ -6,7 +8,7 @@
 #include <queue>
 #include <limits>
 #include <algorithm>
-#include "../data_structures/MutablePriorityQueue.h"
+#include "MutablePriorityQueue.h"
 
 class Edge;
 
@@ -16,6 +18,7 @@ class Edge;
 
 class Vertex {
 public:
+    Vertex();
     Vertex(int id);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
@@ -27,6 +30,7 @@ public:
     double getDist() const;
     Edge *getPath() const;
     std::vector<Edge *> getIncoming() const;
+    bool isBlocked();
 
     void setId(int info);
     void setVisited(bool visited);
@@ -34,13 +38,13 @@ public:
     void setIndegree(unsigned int indegree);
     void setDist(double dist);
     void setPath(Edge *path);
+    void setBlock();
     Edge * addEdge(Vertex *dest, double w);
     bool removeEdge(int destID);
 
     friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
-    Station station;       // each vertex has a Station
     std::vector<Edge *> adj;  // outgoing edges
 
     // auxiliary fields
@@ -53,12 +57,15 @@ protected:
     std::vector<Edge *> incoming; // incoming edges
 
     int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
+
+    bool blocked = false;
 };
 
 /********************** Edge  ****************************/
 
 class Edge {
 public:
+    Edge();
     Edge(Vertex *orig, Vertex *dest, double w);
 
     Vertex * getDest() const;

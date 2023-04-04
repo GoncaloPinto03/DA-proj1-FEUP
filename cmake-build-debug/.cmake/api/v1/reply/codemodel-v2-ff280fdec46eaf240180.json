@@ -15,8 +15,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -31,8 +30,7 @@
 					"name" : "PROJ1",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -40,15 +38,8 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "DATA_STRUCTURES::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DATA_STRUCTURES-Debug-9f8e6dd81ad79aa4c74c.json",
-					"name" : "DATA_STRUCTURES",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "PROJ1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PROJ1-Debug-81a1af3ca2641024591a.json",
+					"jsonFile" : "target-PROJ1-Debug-8b88e880d7c067f89499.json",
 					"name" : "PROJ1",
 					"projectIndex" : 0
 				}
@@ -58,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug",
-		"source" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA"
+		"build" : "/home/guca/Desktop/Proj1DA/cmake-build-debug",
+		"source" : "/home/guca/Desktop/Proj1DA"
 	},
 	"version" : 
 	{

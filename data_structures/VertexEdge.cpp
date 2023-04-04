@@ -1,8 +1,13 @@
+// By: Gonçalo Leão
+
 #include "VertexEdge.h"
 
 /************************* Vertex  **************************/
 
 Vertex::Vertex(int id): id(id) {}
+Vertex::Vertex() {
+
+}
 
 /*
  * Auxiliary function to add an outgoing edge to a vertex (this),
@@ -52,6 +57,7 @@ bool Vertex::operator<(Vertex & vertex) const {
     return this->dist < vertex.dist;
 }
 
+
 int Vertex::getId() const {
     return this->id;
 }
@@ -84,6 +90,10 @@ std::vector<Edge *> Vertex::getIncoming() const {
     return this->incoming;
 }
 
+bool Vertex::isBlocked() {
+    return blocked;
+}
+
 void Vertex::setId(int id) {
     this->id = id;
 }
@@ -108,9 +118,16 @@ void Vertex::setPath(Edge *path) {
     this->path = path;
 }
 
+void Vertex::setBlock() {
+    this->blocked = true;
+}
+
 /********************** Edge  ****************************/
 
 Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
+Edge::Edge(){
+
+}
 
 Vertex * Edge::getDest() const {
     return this->dest;
