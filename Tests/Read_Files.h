@@ -10,8 +10,6 @@ using namespace std;
 #ifndef PROJ1_READ_FILES_H
 #define PROJ1_READ_FILES_H
 
-
-
 class Read_Files {
 public:
     static void read_networks(vector<Network> networks);
@@ -20,6 +18,5 @@ public:
     static void print_stations(vector<Station> stations);
 
 };
-
 
 #endif //PROJ1_READ_FILES_H

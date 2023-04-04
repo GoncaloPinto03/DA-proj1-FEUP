@@ -1,7 +1,7 @@
 CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o: \
- /home/guca/Desktop/Proj1DA/data_structures/UFDS.cpp \
+ /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/data_structures/UFDS.cpp \
  /usr/include/stdc-predef.h \
- /home/guca/Desktop/Proj1DA/data_structures/UFDS.h \
+ /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/data_structures/UFDS.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

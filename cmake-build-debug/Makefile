@@ -57,10 +57,10 @@ RM = /snap/clion/233/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guca/Desktop/Proj1DA
+CMAKE_SOURCE_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guca/Desktop/Proj1DA/cmake-build-debug
+CMAKE_BINARY_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles /home/guca/Desktop/Proj1DA/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,30 @@ PROJ1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/build
 .PHONY : PROJ1/fast
 
+Tests/Auxiliar.o: Tests/Auxiliar.cpp.o
+.PHONY : Tests/Auxiliar.o
+
+# target to build an object file
+Tests/Auxiliar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o
+.PHONY : Tests/Auxiliar.cpp.o
+
+Tests/Auxiliar.i: Tests/Auxiliar.cpp.i
+.PHONY : Tests/Auxiliar.i
+
+# target to preprocess a source file
+Tests/Auxiliar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.i
+.PHONY : Tests/Auxiliar.cpp.i
+
+Tests/Auxiliar.s: Tests/Auxiliar.cpp.s
+.PHONY : Tests/Auxiliar.s
+
+# target to generate assembly for a file
+Tests/Auxiliar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.s
+.PHONY : Tests/Auxiliar.cpp.s
+
 Tests/Main.o: Tests/Main.cpp.o
 .PHONY : Tests/Main.o
 
@@ -152,6 +176,30 @@ Tests/Main.s: Tests/Main.cpp.s
 Tests/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Main.cpp.s
 .PHONY : Tests/Main.cpp.s
+
+Tests/Menu.o: Tests/Menu.cpp.o
+.PHONY : Tests/Menu.o
+
+# target to build an object file
+Tests/Menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o
+.PHONY : Tests/Menu.cpp.o
+
+Tests/Menu.i: Tests/Menu.cpp.i
+.PHONY : Tests/Menu.i
+
+# target to preprocess a source file
+Tests/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Menu.cpp.i
+.PHONY : Tests/Menu.cpp.i
+
+Tests/Menu.s: Tests/Menu.cpp.s
+.PHONY : Tests/Menu.s
+
+# target to generate assembly for a file
+Tests/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Menu.cpp.s
+.PHONY : Tests/Menu.cpp.s
 
 Tests/Network.o: Tests/Network.cpp.o
 .PHONY : Tests/Network.o
@@ -330,9 +378,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PROJ1"
+	@echo "... Tests/Auxiliar.o"
+	@echo "... Tests/Auxiliar.i"
+	@echo "... Tests/Auxiliar.s"
 	@echo "... Tests/Main.o"
 	@echo "... Tests/Main.i"
 	@echo "... Tests/Main.s"
+	@echo "... Tests/Menu.o"
+	@echo "... Tests/Menu.i"
+	@echo "... Tests/Menu.s"
 	@echo "... Tests/Network.o"
 	@echo "... Tests/Network.i"
 	@echo "... Tests/Network.s"

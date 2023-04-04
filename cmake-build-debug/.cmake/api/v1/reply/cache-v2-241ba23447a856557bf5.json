@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug"
+			"value" : "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -627,7 +627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -687,7 +687,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/guca/Desktop/Proj1DA"
+			"value" : "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1223,7 +1223,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug"
+			"value" : "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA/cmake-build-debug"
 		},
 		{
 			"name" : "PROJ1_IS_TOP_LEVEL",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA"
+			"value" : "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project/Proj1DA"
 		},
 		{
 			"name" : "ProcessorCount_cmd_nproc",

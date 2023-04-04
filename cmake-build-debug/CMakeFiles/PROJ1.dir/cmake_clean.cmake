@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o"
+  "CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o.d"
   "CMakeFiles/PROJ1.dir/Tests/Main.cpp.o"
   "CMakeFiles/PROJ1.dir/Tests/Main.cpp.o.d"
+  "CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o"
+  "CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o.d"
   "CMakeFiles/PROJ1.dir/Tests/Network.cpp.o"
   "CMakeFiles/PROJ1.dir/Tests/Network.cpp.o.d"
   "CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.o"
