@@ -1,4 +1,6 @@
 #include "Graph.h"
+#include <limits>
+#include <queue>
 
 std::vector<Vertex *> Graph::getVertexSet() const {
     return vertexSet;
@@ -12,6 +14,29 @@ Vertex * Graph::findVertex(const int &id) const {
         if (v->getId() == id)
             return v;
     return nullptr;
+}
+
+
+bool Graph::removeVertex(const int &id) {
+    Vertex* v = findVertex(id);
+    if (v == nullptr) {
+        return false;
+    }
+
+    for (auto e : v->getAdj()) {
+        auto w = e->getDest();
+        w->removeEdge(v->getId());
+        v->removeEdge(w->getId());
+    }
+
+    for (auto it = vertexSet.begin(); it != vertexSet.end(); it++) {
+        if ((*it)->getId() == id){
+            vertexSet.erase(it);
+            break;
+        }
+    }
+    delete v;
+    return true;
 }
 
 /*
@@ -104,16 +129,13 @@ int Graph::edKarp(int source, int target) const {
         }
     }
 
-    double max_flow = 0;
+    double maxflow = 0;
 
-    while(find_augmentigPath(s,t)){
 
-    }
 }
 
 
-
-bool Graph:: find_augmentigPath(Vertex *sourc, Vertex *dest) const{
+bool Graph::find_augmentigPath(Vertex *sourc, Vertex *dest) const{
 
     std::queue<Vertex *> queue;
     for(auto v : vertexSet){
