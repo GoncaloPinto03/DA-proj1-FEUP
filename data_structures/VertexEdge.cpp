@@ -4,7 +4,6 @@
 
 /************************* Vertex  **************************/
 
-Vertex::Vertex(int id): id(id) {}
 Vertex::Vertex() {
 
 }
@@ -13,7 +12,7 @@ Vertex::Vertex() {
  * Auxiliary function to add an outgoing edge to a vertex (this),
  * with a given destination vertex (d) and edge weight (w).
  */
-Edge * Vertex::addEdge(Vertex *d, double w, const std::string &service) {
+Edge * Vertex::addEdge(Vertex *d, double w) {
     auto newEdge = new Edge(this, d, w);
     adj.push_back(newEdge);
     d->incoming.push_back(newEdge);
@@ -122,6 +121,19 @@ void Vertex::setPath(Edge *path) {
 
 void Vertex::setBlock() {
     this->blocked = true;
+}
+
+double const Vertex::getCapacity() {
+    return this->capacity;
+}
+
+Vertex::Vertex(int id, std::string name, std::string district, std::string municipality, std::string township,
+               std::string line) {
+
+}
+
+std::string Vertex::getName() const {
+    return this->name;
 }
 
 /********************** Edge  ****************************/

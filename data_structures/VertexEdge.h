@@ -8,6 +8,7 @@
 #include <queue>
 #include <limits>
 #include <algorithm>
+#include "string"
 #include "MutablePriorityQueue.h"
 
 class Edge;
@@ -19,19 +20,22 @@ class Edge;
 class Vertex {
 public:
     Vertex();
-    Vertex(int id);
+    //Vertex(int id);
+    Vertex(int id, std::string name, std::string district, std::string municipality, std::string township, std::string line);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
     int getId() const;
+    std::string getName() const;
     std::vector<Edge *> getAdj() const;
     bool isVisited() const;
     bool isProcessing() const;
-    Edge* addEdge(Vertex* dest, int weight, const std::string& service);
+    //Edge* addEdge(Vertex* dest, int weight, const std::string& service);
     unsigned int getIndegree() const;
     double getDist() const;
     Edge *getPath() const;
     std::vector<Edge *> getIncoming() const;
     bool isBlocked();
+    double const getCapacity();
 
     void setId(int info);
     void setVisited(bool visited);
@@ -44,10 +48,16 @@ public:
 
     friend class MutablePriorityQueue<Vertex>;
 
-    Edge *addEdge(Vertex *d, double w, const std::string &service);
+    Edge *addEdge(Vertex *d, double w);
 
 protected:
     int id;                // identifier
+
+    std::string name;
+    std::string district;
+    std::string municipality;
+    std::string township;
+    std::string line;
     std::vector<Edge *> adj;  // outgoing edges
 
     // auxiliary fields
@@ -63,6 +73,7 @@ protected:
 
     bool blocked = false;
 
+    double capacity = 0;
 };
 
 /********************** Edge  ****************************/

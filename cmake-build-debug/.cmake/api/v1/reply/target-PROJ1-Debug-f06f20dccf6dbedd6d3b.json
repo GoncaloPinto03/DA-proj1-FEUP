@@ -49,7 +49,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/guca/Desktop/Proj1DA/Tests"
+					"path" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA/Tests"
 				}
 			],
 			"language" : "CXX",
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Tests/Read_Files.cpp",
+			"path" : "Tests/Manager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

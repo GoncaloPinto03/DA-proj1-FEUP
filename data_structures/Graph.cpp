@@ -1,6 +1,8 @@
 #include "Graph.h"
 #include <limits>
 #include <queue>
+#include <algorithm>
+#include <iostream>
 
 std::vector<Vertex *> Graph::getVertexSet() const {
     return vertexSet;
@@ -52,10 +54,10 @@ int Graph::findVertexIdx(const int &id) const {
  *  Adds a vertex with a given content or info (in) to a graph (this).
  *  Returns true if successful, and false if a vertex with that content already exists.
  */
-bool Graph::addVertex(const int &id) {
+bool Graph::addVertex(const int &id, string name ,string district, string municipality, string township, string line) {
     if (findVertex(id) != nullptr)
         return false;
-    vertexSet.push_back(new Vertex(id));
+    vertexSet.push_back(new Vertex(id, name, district, municipality, township, line));
     return true;
 }
 
@@ -64,24 +66,24 @@ bool Graph::addVertex(const int &id) {
  * destination vertices and the edge weight (w).
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
-bool Graph::addEdge(const int &sourc, const int &dest, double w, std::string &service) {
+bool Graph::addEdge(const int &sourc, const int &dest, double w) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    v1->addEdge(v2, w, service);
+    v1->addEdge(v2, w);
     return true;
 }
 
 
 
-bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w, const std::string &service) {
+bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    auto e1 = v1->addEdge(v2, w, service);
-    auto e2 = v2->addEdge(v1, w, service);
+    auto e1 = v1->addEdge(v2, w);
+    auto e2 = v2->addEdge(v1, w);
     e1->setReverse(e2);
     e2->setReverse(e1);
     return true;
@@ -130,7 +132,39 @@ int Graph::edKarp(int source, int target) const {
     }
 
     double maxflow = 0;
+    while (find_augmentigPath(s, t)) {
+        int pathFlow = std::numeric_limits<int>::max();
 
+        // Find the minimum flow in the path
+        for (auto v = t; v != s;) {
+            auto e = v->getPath();
+            if (e->getDest() == v) {
+                if (pathFlow < e->getWeight() - e->getFlow()) pathFlow = pathFlow;
+                else pathFlow = e->getWeight() - e->getFlow();
+                v = e->getOrig();
+            } else {
+                if (pathFlow < e->getFlow()) pathFlow = pathFlow;
+                else pathFlow = e->getFlow();
+                v = e->getDest();
+            }
+        }
+
+        // Update the flow in the path
+        for (auto v = t; v != s;) {
+            auto e = v->getPath();
+            if (e->getDest() == v) {
+                e->setFlow(e->getFlow() + pathFlow);
+                v = e->getOrig();
+            } else {
+                e->setFlow(e->getFlow() - pathFlow);
+                v = e->getDest();
+            }
+        }
+
+        maxflow += pathFlow;
+    }
+
+    return (maxflow ? maxflow : -1);
 
 }
 

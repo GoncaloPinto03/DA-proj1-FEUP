@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug"
+			"value" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-j8"
+			"value" : "-j16"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -627,7 +627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -687,7 +687,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/guca/Desktop/Proj1DA"
+			"value" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1223,7 +1223,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA/cmake-build-debug"
+			"value" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug"
 		},
 		{
 			"name" : "PROJ1_IS_TOP_LEVEL",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/guca/Desktop/Proj1DA"
+			"value" : "/home/gpinto03/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj1DA"
 		},
 		{
 			"name" : "ProcessorCount_cmd_nproc",

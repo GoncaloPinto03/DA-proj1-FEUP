@@ -57,10 +57,10 @@ RM = /snap/clion/233/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guca/Desktop/Proj1DA
+CMAKE_SOURCE_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guca/Desktop/Proj1DA/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles /home/guca/Desktop/Proj1DA/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ Tests/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Main.cpp.s
 .PHONY : Tests/Main.cpp.s
 
+Tests/Manager.o: Tests/Manager.cpp.o
+.PHONY : Tests/Manager.o
+
+# target to build an object file
+Tests/Manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o
+.PHONY : Tests/Manager.cpp.o
+
+Tests/Manager.i: Tests/Manager.cpp.i
+.PHONY : Tests/Manager.i
+
+# target to preprocess a source file
+Tests/Manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Manager.cpp.i
+.PHONY : Tests/Manager.cpp.i
+
+Tests/Manager.s: Tests/Manager.cpp.s
+.PHONY : Tests/Manager.s
+
+# target to generate assembly for a file
+Tests/Manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Manager.cpp.s
+.PHONY : Tests/Manager.cpp.s
+
 Tests/Menu.o: Tests/Menu.cpp.o
 .PHONY : Tests/Menu.o
 
@@ -224,30 +248,6 @@ Tests/Network.s: Tests/Network.cpp.s
 Tests/Network.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Network.cpp.s
 .PHONY : Tests/Network.cpp.s
-
-Tests/Read_Files.o: Tests/Read_Files.cpp.o
-.PHONY : Tests/Read_Files.o
-
-# target to build an object file
-Tests/Read_Files.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.o
-.PHONY : Tests/Read_Files.cpp.o
-
-Tests/Read_Files.i: Tests/Read_Files.cpp.i
-.PHONY : Tests/Read_Files.i
-
-# target to preprocess a source file
-Tests/Read_Files.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.i
-.PHONY : Tests/Read_Files.cpp.i
-
-Tests/Read_Files.s: Tests/Read_Files.cpp.s
-.PHONY : Tests/Read_Files.s
-
-# target to generate assembly for a file
-Tests/Read_Files.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/Tests/Read_Files.cpp.s
-.PHONY : Tests/Read_Files.cpp.s
 
 Tests/Station.o: Tests/Station.cpp.o
 .PHONY : Tests/Station.o
@@ -384,15 +384,15 @@ help:
 	@echo "... Tests/Main.o"
 	@echo "... Tests/Main.i"
 	@echo "... Tests/Main.s"
+	@echo "... Tests/Manager.o"
+	@echo "... Tests/Manager.i"
+	@echo "... Tests/Manager.s"
 	@echo "... Tests/Menu.o"
 	@echo "... Tests/Menu.i"
 	@echo "... Tests/Menu.s"
 	@echo "... Tests/Network.o"
 	@echo "... Tests/Network.i"
 	@echo "... Tests/Network.s"
-	@echo "... Tests/Read_Files.o"
-	@echo "... Tests/Read_Files.i"
-	@echo "... Tests/Read_Files.s"
 	@echo "... Tests/Station.o"
 	@echo "... Tests/Station.i"
 	@echo "... Tests/Station.s"

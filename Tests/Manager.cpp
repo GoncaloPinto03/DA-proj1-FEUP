@@ -1,6 +1,6 @@
-#include "Read_Files.h"
+#include "Manager.h"
 
-void Read_Files::read_networks(vector<Network> networks) {
+void Manager::read_networks(vector<Network> networks) {
     string stationA;
     string stationB;
     string capacity_str;
@@ -21,6 +21,7 @@ void Read_Files::read_networks(vector<Network> networks) {
             capacity = stoi(capacity_str);
             Network network(stationA, stationB, capacity, service);
             networks.push_back(network);
+
         }
     }
     else {
@@ -30,13 +31,13 @@ void Read_Files::read_networks(vector<Network> networks) {
     networks.pop_back();
 }
 
-void Read_Files::print_networks(vector<Network> networks) {
+void Manager::print_networks(vector<Network> networks) {
     for (auto &i : networks) {
         cout << i.get_stationA() << ", " << i.get_stationB() << ", " << i.get_capacity() << ", " << i.get_service() << endl;
     }
 }
 
-void Read_Files::read_stations(vector<Station> stations) {
+void Manager::read_stations(vector<Station> stations) {
     string name;
     string district;
     string municipality;
@@ -64,11 +65,19 @@ void Read_Files::read_stations(vector<Station> stations) {
     }
     input.close();
     stations.pop_back();
+    int n = 1;
+    for (auto i : stations) {
+        graph.addVertex(n, i.get_name(), i.get_district(), i.get_municipality(), i.get_township(), i.get_line());
+    }
 }
 
-void Read_Files::print_stations(vector<Station> stations) {
+void Manager::print_stations(vector<Station> stations) {
     for (auto &i : stations) {
         cout << i.get_name() << ", " << i.get_district() << ", " << i.get_municipality() << ", " << i.get_township() << ", " << i.get_line() << endl;
     }
+}
+
+Manager::Manager() {
+
 }
 

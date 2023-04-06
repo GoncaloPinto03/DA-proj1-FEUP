@@ -9,10 +9,10 @@
 #include "MutablePriorityQueue.h"
 
 #include "VertexEdge.h"
+using namespace std;
 
 class Graph {
 public:
-
 
     Graph();
     // Graph(int nrVertex);
@@ -41,7 +41,7 @@ public:
  * @return true Vertex was added
  * @return false Vertex with that id already exists
  */
-    bool addVertex(const int &id);
+    bool addVertex(const int &id, string name ,string district, string municipality, string township, string line);
 
     /*
      * Adds an edge to a graph (this), given the contents of the source and
@@ -49,6 +49,10 @@ public:
      * Returns true if successful, and false if the source or destination vertex does not exist.
      */
 
+
+    bool addBidirectionalEdge(const int &sourc, const int &dest, double w);
+
+    bool addEdge(const int &sourc, const int &dest, double w);
 
     int getNumVertex() const;
     std::vector<Vertex *> getVertexSet() const;
@@ -69,9 +73,6 @@ protected:
 
     int edKarp(int source, int target) const;
 
-    bool addBidirectionalEdge(const int &sourc, const int &dest, double w, const std::string &service);
-
-    bool addEdge(const int &sourc, const int &dest, double w, std::string &service);
 
     /**
      * @brief Remove a vertex from the graph
