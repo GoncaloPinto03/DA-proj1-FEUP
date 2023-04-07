@@ -26,7 +26,7 @@ public:
      * @param id Vertex id
      * @return Vertex* vertex
      */
-    Vertex *findVertex(const int &id) const;
+    Vertex *findVertex(const std::string &name) const;
 
 
     /*
@@ -41,7 +41,7 @@ public:
  * @return true Vertex was added
  * @return false Vertex with that id already exists
  */
-    bool addVertex(const int &id, string name ,string district, string municipality, string township, string line);
+    bool addVertex(Station station);
 
     /*
      * Adds an edge to a graph (this), given the contents of the source and
@@ -50,9 +50,13 @@ public:
      */
 
 
-    bool addBidirectionalEdge(const int &sourc, const int &dest, double w);
+    bool addBidirectionalEdge(const std::string& source, const std::string& dest, double w);
 
-    bool addEdge(const int &sourc, const int &dest, double w);
+    bool addEdge(const std::string& source, const std::string& dest, double w);
+
+    int edKarp(const std::string& source, const std::string& dest) const;
+
+    bool find_augmentigPath(Vertex *sourc, Vertex *dest) const;
 
     int getNumVertex() const;
     std::vector<Vertex *> getVertexSet() const;
@@ -69,9 +73,7 @@ protected:
     /*
      * Finds the index of the vertex with a given content.
      */
-    int findVertexIdx(const int &id) const;
-
-    int edKarp(int source, int target) const;
+    int findVertexIdx(const std::string &name) const;
 
 
     /**
@@ -81,9 +83,7 @@ protected:
      * @return true Vertex was removed
      * @return false Vertex was not found
      */
-    bool removeVertex(const int &id);
-
-    bool find_augmentigPath(Vertex *sourc, Vertex *dest) const;
+    bool removeVertex(const std::string &name);
 };
 
 void deleteMatrix(int **m, int n);

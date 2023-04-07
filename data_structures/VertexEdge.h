@@ -9,6 +9,7 @@
 #include <limits>
 #include <algorithm>
 #include "string"
+#include "../Tests/Station.h"
 #include "MutablePriorityQueue.h"
 
 class Edge;
@@ -21,11 +22,11 @@ class Vertex {
 public:
     Vertex();
     //Vertex(int id);
-    Vertex(int id, std::string name, std::string district, std::string municipality, std::string township, std::string line);
+    Vertex(Station station);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
-    int getId() const;
-    std::string getName() const;
+
+    Station getStation() const;
     std::vector<Edge *> getAdj() const;
     bool isVisited() const;
     bool isProcessing() const;
@@ -37,27 +38,27 @@ public:
     bool isBlocked();
     double const getCapacity();
 
-    void setId(int info);
     void setVisited(bool visited);
     void setProcesssing(bool processing);
     void setIndegree(unsigned int indegree);
     void setDist(double dist);
     void setPath(Edge *path);
     void setBlock();
-    bool removeEdge(int destID);
+    bool removeEdge(Station station);
 
     friend class MutablePriorityQueue<Vertex>;
 
     Edge *addEdge(Vertex *d, double w);
 
 protected:
-    int id;                // identifier
-
+    Station station;
+    /*
     std::string name;
     std::string district;
     std::string municipality;
     std::string township;
     std::string line;
+     */
     std::vector<Edge *> adj;  // outgoing edges
 
     // auxiliary fields

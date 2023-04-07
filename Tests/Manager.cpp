@@ -20,8 +20,8 @@ void Manager::read_networks(vector<Network> networks) {
 
             capacity = stoi(capacity_str);
             Network network(stationA, stationB, capacity, service);
+            graph.addBidirectionalEdge(stationA, stationB, capacity);
             networks.push_back(network);
-
         }
     }
     else {
@@ -57,6 +57,7 @@ void Manager::read_stations(vector<Station> stations) {
             getline(input, line, '\n');
 
             Station station(name, district, municipality, township, line);
+            graph.addVertex(station);
             stations.push_back(station);
         }
     }
@@ -65,10 +66,6 @@ void Manager::read_stations(vector<Station> stations) {
     }
     input.close();
     stations.pop_back();
-    int n = 1;
-    for (auto i : stations) {
-        graph.addVertex(n, i.get_name(), i.get_district(), i.get_municipality(), i.get_township(), i.get_line());
-    }
 }
 
 void Manager::print_stations(vector<Station> stations) {
@@ -79,5 +76,28 @@ void Manager::print_stations(vector<Station> stations) {
 
 Manager::Manager() {
 
+}
+
+int Manager::maxTrainBetweenStations(const Graph &graph) {
+    std::string station_a, station_b;
+
+    std::cout << "Station A: ";
+    getline(std::cin, station_a);
+
+    std::cout << "Station B: ";
+    getline(std::cin, station_b);
+
+
+
+    int max_trains = graph.edKarp(station_a, station_b);
+
+    if (max_trains == -1) {
+        std::cout << "Invalid stations!\n";
+        return -1;
+    }
+
+    std::cout << "Max number of trains between " << station_a << " and " << station_b << ": " << max_trains << "\n";
+
+    return max_trains;
 }
 

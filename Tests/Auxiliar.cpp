@@ -5,7 +5,7 @@
 using namespace std;
 
 void clearSCR() {
-    cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+    cout << endl << endl << endl << endl << endl << endl << endl;
 }
 
 void title(const string& string) {

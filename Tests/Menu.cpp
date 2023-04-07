@@ -8,8 +8,8 @@ void Menu::mainMenu() {
 
     int key = getInt("Choose an option");
     while (key < 1 || key > 10) key = getInt("Not a valid option. Choose a valid option.");
-    if (key == 2) state = 1;
-    else state = 5;
+    if (key >= 4) state = 5;
+    else state = 1;
 }
 
 bool Menu::nextState(vector<Network> &networks, vector<Station> &stations) {
@@ -23,10 +23,6 @@ bool Menu::nextState(vector<Network> &networks, vector<Station> &stations) {
             return true;
         case 2:
             first(networks, stations);
-            state = 5;
-            return true;
-        case 3:
-            second(networks, stations);
             state = 5;
             return true;
         default:

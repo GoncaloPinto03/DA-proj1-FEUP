@@ -19,6 +19,7 @@ int main() {
     manager.read_stations(stations);
 
     // create Graph
+    /*
     int n = 1;
     for (auto i : stations) {
         manager.graph.addVertex(n, i.get_name(), i.get_district(), i.get_municipality(), i.get_township(), i.get_line());
@@ -37,6 +38,18 @@ int main() {
     }
     manager.graph.addEdge(a, b, cap);
 
+     */
+    Graph graph = manager.graph;
+    cout << manager.graph.getNumVertex() << endl;  // number of vertices
+    //cout << graph.getVertexSet().front()->getName() << endl;
+    //cout << graph.findVertex("Retaxo")->getName() << endl;
+
+    auto v = graph.findVertex("Porto Campanhã");
+    if (v != nullptr) {
+        std::cout << "Informações da estação encontrada: " << v->getStation().get_name() << std::endl;
+    } else {
+        std::cout << "Estação não encontrada!" << std::endl;
+    }
     Menu menu;
     bool run = true;
     while (run) {

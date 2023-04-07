@@ -26,18 +26,18 @@ Edge * Vertex::addEdge(Vertex *d, double w) {
  * from a vertex (this).
  * Returns true if successful, and false if such edge does not exist.
  */
-bool Vertex::removeEdge(int destID) {
+bool Vertex::removeEdge(Station destStation) {
     bool removedEdge = false;
     auto it = adj.begin();
     while (it != adj.end()) {
         Edge *edge = *it;
         Vertex *dest = edge->getDest();
-        if (dest->getId() == destID) {
+        if (dest->getStation().get_name() == destStation.get_name()) {
             it = adj.erase(it);
             // Also remove the corresponding edge from the incoming list
             auto it2 = dest->incoming.begin();
             while (it2 != dest->incoming.end()) {
-                if ((*it2)->getOrig()->getId() == id) {
+                if ((*it2)->getOrig()->getStation().get_name() == destStation.get_name()) {
                     it2 = dest->incoming.erase(it2);
                 }
                 else {
@@ -56,11 +56,6 @@ bool Vertex::removeEdge(int destID) {
 
 bool Vertex::operator<(Vertex & vertex) const {
     return this->dist < vertex.dist;
-}
-
-
-int Vertex::getId() const {
-    return this->id;
 }
 
 std::vector<Edge*> Vertex::getAdj() const {
@@ -95,9 +90,8 @@ bool Vertex::isBlocked() {
     return blocked;
 }
 
-void Vertex::setId(int id) {
-    this->id = id;
-}
+
+
 
 void Vertex::setVisited(bool visited) {
     this->visited = visited;
@@ -127,14 +121,13 @@ double const Vertex::getCapacity() {
     return this->capacity;
 }
 
-Vertex::Vertex(int id, std::string name, std::string district, std::string municipality, std::string township,
-               std::string line) {
-
+Vertex::Vertex(Station station1) {
 }
 
-std::string Vertex::getName() const {
-    return this->name;
+Station Vertex::getStation() const {
+    return this->station;
 }
+
 
 /********************** Edge  ****************************/
 

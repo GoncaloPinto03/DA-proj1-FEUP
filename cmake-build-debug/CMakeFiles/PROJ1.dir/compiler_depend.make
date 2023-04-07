@@ -427,6 +427,7 @@ CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestr
   /usr/include/c++/11/pstl/execution_defs.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h \
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Menu.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/Heap.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h \
@@ -661,7 +662,8 @@ CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Seme
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h \
-  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h \
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.h
 
 CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Menu.cpp \
   /usr/include/stdc-predef.h \
@@ -893,6 +895,7 @@ CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestr
   /usr/include/c++/11/pstl/execution_defs.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h \
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Auxiliar.h
 
 CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Network.cpp \
@@ -1477,7 +1480,8 @@ CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h \
-  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.h \
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.h
 
 CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/Heap.cpp \
   /usr/include/stdc-predef.h \
@@ -1798,6 +1802,7 @@ CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o: /home/gpinto03/FEUP/2º\ 
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/pstl/execution_defs.h \
+  /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.h \
   /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/MutablePriorityQueue.h
 
 

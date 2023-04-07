@@ -20,7 +20,7 @@ public:
     void read_stations(vector<Station> stations);
     void print_networks(vector<Network> networks);
     void print_stations(vector<Station> stations);
-
+    int maxTrainBetweenStations(const Graph& graph);
 
 };
 

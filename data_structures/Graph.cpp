@@ -11,28 +11,40 @@ std::vector<Vertex *> Graph::getVertexSet() const {
 /*
  * Auxiliary function to find a vertex with a given content.
  */
-Vertex * Graph::findVertex(const int &id) const {
+/*
+Vertex * Graph::findVertex(const std::string &name) const {
     for (auto v : vertexSet)
-        if (v->getId() == id)
+        if (v->getName() == name)
             return v;
+    return nullptr;
+}*/
+Vertex* Graph::findVertex(const std::string& name)const {
+    // Percorra todos os vértices do grafo
+    for (auto v : vertexSet) {
+        // Se o nome do vértice atual for igual ao nome da estação procurada, retorne-o
+        if (v->getStation().get_name() == name) {
+            return v;
+        }
+    }
+    // Se a estação não for encontrada, retorne nullptr
     return nullptr;
 }
 
 
-bool Graph::removeVertex(const int &id) {
-    Vertex* v = findVertex(id);
+bool Graph::removeVertex(const std::string &name) {
+    Vertex* v = findVertex(name);
     if (v == nullptr) {
         return false;
     }
 
     for (auto e : v->getAdj()) {
         auto w = e->getDest();
-        w->removeEdge(v->getId());
-        v->removeEdge(w->getId());
+        w->removeEdge(v->getStation());
+        v->removeEdge(w->getStation());
     }
 
     for (auto it = vertexSet.begin(); it != vertexSet.end(); it++) {
-        if ((*it)->getId() == id){
+        if ((*it)->getStation().get_name() == name){
             vertexSet.erase(it);
             break;
         }
@@ -44,9 +56,9 @@ bool Graph::removeVertex(const int &id) {
 /*
  * Finds the index of the vertex with a given content.
  */
-int Graph::findVertexIdx(const int &id) const {
+int Graph::findVertexIdx(const std::string &name) const {
     for (unsigned i = 0; i < vertexSet.size(); i++)
-        if (vertexSet[i]->getId() == id)
+        if (vertexSet[i]->getStation().get_name() ==name)
             return i;
     return -1;
 }
@@ -54,10 +66,10 @@ int Graph::findVertexIdx(const int &id) const {
  *  Adds a vertex with a given content or info (in) to a graph (this).
  *  Returns true if successful, and false if a vertex with that content already exists.
  */
-bool Graph::addVertex(const int &id, string name ,string district, string municipality, string township, string line) {
-    if (findVertex(id) != nullptr)
+bool Graph::addVertex(Station station) {
+    if (findVertex(station.get_name()) != nullptr)
         return false;
-    vertexSet.push_back(new Vertex(id, name, district, municipality, township, line));
+    vertexSet.push_back(new Vertex(station));
     return true;
 }
 
@@ -66,8 +78,8 @@ bool Graph::addVertex(const int &id, string name ,string district, string munici
  * destination vertices and the edge weight (w).
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
-bool Graph::addEdge(const int &sourc, const int &dest, double w) {
-    auto v1 = findVertex(sourc);
+bool Graph::addEdge(const std::string& source, const std::string& dest, double w) {
+    auto v1 = findVertex(source);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
@@ -77,8 +89,8 @@ bool Graph::addEdge(const int &sourc, const int &dest, double w) {
 
 
 
-bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w) {
-    auto v1 = findVertex(sourc);
+bool Graph::addBidirectionalEdge(const std::string& source, const std::string& dest, double w) {
+    auto v1 = findVertex(source);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
@@ -115,80 +127,78 @@ Graph::Graph() {
 }
 
 
-int Graph::edKarp(int source, int target) const {
-    auto s = findVertex(source);
-    auto t = findVertex(target);
+    int Graph::edKarp(const std::string& source, const std::string& dest) const {
+        auto s = findVertex(source);
+        auto t = findVertex(dest);
 
-    // Check if source and destination are valid
-    if (s == nullptr || t == nullptr || s == t) {
-        return -1;
+        // Check if source and destination are valid
+        if (s == nullptr || t == nullptr || s == t) {
+            return -1;
+        }
+
+        // Reset the flow in the edges
+        for (auto v: vertexSet) {
+            for (auto e: v->getAdj()) {
+                e->setFlow(0);
+            }
+        }
+
+        double maxflow = 0;
+        while (find_augmentigPath(s, t)) {
+            int pathFlow = std::numeric_limits<int>::max();
+
+            // Find the minimum flow in the path
+            for (auto v = t; v != s;) {
+                auto e = v->getPath();
+                if (e->getDest() == v) {
+                    if (pathFlow < e->getWeight() - e->getFlow()) pathFlow = pathFlow;
+                    else pathFlow = e->getWeight() - e->getFlow();
+                    v = e->getOrig();
+                } else {
+                    if (pathFlow < e->getFlow()) pathFlow = pathFlow;
+                    else pathFlow = e->getFlow();
+                    v = e->getDest();
+                }
+            }
+
+            // Update the flow in the path
+            for (auto v = t; v != s;) {
+                auto e = v->getPath();
+                if (e->getDest() == v) {
+                    e->setFlow(e->getFlow() + pathFlow);
+                    v = e->getOrig();
+                } else {
+                    e->setFlow(e->getFlow() - pathFlow);
+                    v = e->getDest();
+                }
+            }
+
+            maxflow += pathFlow;
+        }
+        return maxflow;
+
     }
 
-    // Reset the flow in the edges
+
+bool Graph::find_augmentigPath(Vertex *source, Vertex *dest) const{
+
     for (auto v: vertexSet) {
-        for (auto e: v->getAdj()) {
-            e->setFlow(0);
-        }
-    }
-
-    double maxflow = 0;
-    while (find_augmentigPath(s, t)) {
-        int pathFlow = std::numeric_limits<int>::max();
-
-        // Find the minimum flow in the path
-        for (auto v = t; v != s;) {
-            auto e = v->getPath();
-            if (e->getDest() == v) {
-                if (pathFlow < e->getWeight() - e->getFlow()) pathFlow = pathFlow;
-                else pathFlow = e->getWeight() - e->getFlow();
-                v = e->getOrig();
-            } else {
-                if (pathFlow < e->getFlow()) pathFlow = pathFlow;
-                else pathFlow = e->getFlow();
-                v = e->getDest();
-            }
-        }
-
-        // Update the flow in the path
-        for (auto v = t; v != s;) {
-            auto e = v->getPath();
-            if (e->getDest() == v) {
-                e->setFlow(e->getFlow() + pathFlow);
-                v = e->getOrig();
-            } else {
-                e->setFlow(e->getFlow() - pathFlow);
-                v = e->getDest();
-            }
-        }
-
-        maxflow += pathFlow;
-    }
-
-    return (maxflow ? maxflow : -1);
-
-}
-
-
-bool Graph::find_augmentigPath(Vertex *sourc, Vertex *dest) const{
-
-    std::queue<Vertex *> queue;
-    for(auto v : vertexSet){
         v->setVisited(false);
-        v->setPath(nullptr);
-        for(auto e : v->getAdj()){
-            delete e->getReverse();
-            e->setReverse(nullptr);
-        }
     }
-    while (!queue.empty() && !dest->isVisited()) {
-        auto v = queue.front(); queue.pop();
+
+    source->setVisited(true);
+    std::queue<Vertex *> q;
+    q.push(source);
+
+    while (!q.empty() && !dest->isVisited()) {
+        auto v = q.front(); q.pop();
 
         for (auto e: v->getAdj()) {
             auto w = e->getDest();
             if (!w->isVisited() && e->getWeight() - e->getFlow() > 0) {
                 w->setVisited(true);
                 w->setPath(e);
-                queue.push(w);
+                q.push(w);
             }
         }
 
@@ -197,10 +207,11 @@ bool Graph::find_augmentigPath(Vertex *sourc, Vertex *dest) const{
             if (!w->isVisited() && e->getFlow() > 0) {
                 w->setVisited(true);
                 w->setPath(e);
-                queue.push(w);
+                q.push(w);
             }
         }
     }
+
     return dest->isVisited();
 }
 
