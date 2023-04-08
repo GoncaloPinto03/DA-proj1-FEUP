@@ -127,6 +127,7 @@ Graph::Graph() {
 }
 
 
+// funcs TP3 - ex7
 void Graph::testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual) {
     if (! w->isVisited() && residual > 0) {
         w->setVisited(true);
@@ -134,7 +135,6 @@ void Graph::testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double res
         q.push(w);
     }
 }
-
 bool Graph::findAugmentingPath(Vertex *s, Vertex *t) {
     for(auto v : vertexSet) {
         v->setVisited(false);
@@ -154,7 +154,6 @@ bool Graph::findAugmentingPath(Vertex *s, Vertex *t) {
     }
     return t->isVisited();
 }
-
 double Graph::findMinResidualAlongPath(Vertex *s, Vertex *t) {
     double f = INF;
     for (auto v = t; v != s; ) {
@@ -170,7 +169,6 @@ double Graph::findMinResidualAlongPath(Vertex *s, Vertex *t) {
     }
     return f;
 }
-
 void Graph::augmentFlowAlongPath(Vertex *s, Vertex *t, double f) {
     for (auto v = t; v != s; ) {
         auto e = v->getPath();
@@ -185,7 +183,6 @@ void Graph::augmentFlowAlongPath(Vertex *s, Vertex *t, double f) {
         }
     }
 }
-
 int Graph::edmondsKarp(std::string source, std::string target) {
     int result_final=0;
     Vertex* s = findVertex(source);
@@ -212,6 +209,8 @@ int Graph::getNumVertex() const{
     return this->vertexSet.size();
 }
 
+
+// our funcs
 int Graph::edmondsKarp2(std::string source, std::string target) {
     // TODO
     for(auto v : vertexSet){

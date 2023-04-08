@@ -15,12 +15,13 @@ int main() {
     vector<Network> networks;
     vector<Station> stations;
     Manager manager = Manager();
-    manager.read_networks(networks);
     manager.read_stations(stations);
+    manager.read_networks(networks);
 
     Graph graph = manager.graph;
 
     manager.maxTrainBetweenStations();
+    manager.maxTrainBetweenStationsPairs();
     Menu menu;
     bool run = true;
     while (run) {

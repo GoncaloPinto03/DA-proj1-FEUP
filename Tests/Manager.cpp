@@ -94,3 +94,25 @@ int Manager::maxTrainBetweenStations() {
     return max_trains;
 }
 
+int Manager::maxTrainBetweenStationsPairs() {
+    int max_trains = 0;
+    std::string v1;
+    std::string v2;
+    for (auto i : graph.getVertexSet()){
+        for (auto j : graph.getVertexSet()){
+            if (i != j) {
+                int a = graph.edmondsKarp2(i->getStation().get_name(), j->getStation().get_name());
+                if (a > max_trains) {
+                    max_trains = a;
+                    v1 = i->getStation().get_name();
+                    v2 = j->getStation().get_name();
+                }
+            }
+        }
+    }
+
+    std::cout << "Max number of trains between " << v1 << " and " << v2 << ": " << max_trains << "\n";
+
+    return max_trains;
+}
+

@@ -21,7 +21,7 @@ public:
     void print_networks(vector<Network> networks);
     void print_stations(vector<Station> stations);
     int maxTrainBetweenStations();
-
+    int maxTrainBetweenStationsPairs();
 };
 
 #endif //PROJ1_READ_FILES_H
