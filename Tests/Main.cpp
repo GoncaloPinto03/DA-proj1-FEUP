@@ -14,42 +14,13 @@ using namespace std;
 int main() {
     vector<Network> networks;
     vector<Station> stations;
-    Manager manager;
+    Manager manager = Manager();
     manager.read_networks(networks);
     manager.read_stations(stations);
 
-    // create Graph
-    /*
-    int n = 1;
-    for (auto i : stations) {
-        manager.graph.addVertex(n, i.get_name(), i.get_district(), i.get_municipality(), i.get_township(), i.get_line());
-    }
-    cout << manager.graph.getNumVertex() << endl;
-    int a, b;
-    double cap;
-    for (auto j : networks) {
-        for (auto k : manager.graph.getVertexSet()) {
-            if ((k->getName() == j.get_stationA()) && (k->getName() == j.get_stationB()))
-                a = k->getId();
-                b = k->getId();
-                cap = j.get_capacity();
-                break;
-        }
-    }
-    manager.graph.addEdge(a, b, cap);
-
-     */
     Graph graph = manager.graph;
-    cout << manager.graph.getNumVertex() << endl;  // number of vertices
-    //cout << graph.getVertexSet().front()->getName() << endl;
-    //cout << graph.findVertex("Retaxo")->getName() << endl;
 
-    auto v = graph.findVertex("Porto Campanhã");
-    if (v != nullptr) {
-        std::cout << "Informações da estação encontrada: " << v->getStation().get_name() << std::endl;
-    } else {
-        std::cout << "Estação não encontrada!" << std::endl;
-    }
+    manager.maxTrainBetweenStations();
     Menu menu;
     bool run = true;
     while (run) {

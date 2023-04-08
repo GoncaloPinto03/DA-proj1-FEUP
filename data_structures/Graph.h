@@ -54,12 +54,15 @@ public:
 
     bool addEdge(const std::string& source, const std::string& dest, double w);
 
-    int edKarp(const std::string& source, const std::string& dest) const;
-
-    bool find_augmentigPath(Vertex *sourc, Vertex *dest) const;
 
     int getNumVertex() const;
     std::vector<Vertex *> getVertexSet() const;
+
+    int edmondsKarp(std::string source, std::string target);
+    int edmondsKarp2(std::string source, std::string target);
+    bool bfskarp(std::string source, std::string target);
+
+
 protected:
 
     /**
@@ -84,6 +87,15 @@ protected:
      * @return false Vertex was not found
      */
     bool removeVertex(const std::string &name);
+
+    void testAndVisit(queue<Vertex *> &q, Edge *e, Vertex *w, double residual);
+
+    bool findAugmentingPath(Vertex *s, Vertex *t);
+
+    void augmentFlowAlongPath(Vertex *s, Vertex *t, double f);
+
+    double findMinResidualAlongPath(Vertex *s, Vertex *t);
+
 };
 
 void deleteMatrix(int **m, int n);

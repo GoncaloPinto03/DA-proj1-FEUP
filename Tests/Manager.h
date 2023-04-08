@@ -16,11 +16,11 @@ public:
     Manager();
     Graph graph;
 
-    void read_networks(vector<Network> networks);
-    void read_stations(vector<Station> stations);
+    void read_networks(vector<Network> &networks);
+    void read_stations(vector<Station> &stations);
     void print_networks(vector<Network> networks);
     void print_stations(vector<Station> stations);
-    int maxTrainBetweenStations(const Graph& graph);
+    int maxTrainBetweenStations();
 
 };
 

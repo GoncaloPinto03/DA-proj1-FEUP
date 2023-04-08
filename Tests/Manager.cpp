@@ -1,6 +1,6 @@
 #include "Manager.h"
 
-void Manager::read_networks(vector<Network> networks) {
+void Manager::read_networks(vector<Network> &networks) {
     string stationA;
     string stationB;
     string capacity_str;
@@ -37,7 +37,7 @@ void Manager::print_networks(vector<Network> networks) {
     }
 }
 
-void Manager::read_stations(vector<Station> stations) {
+void Manager::read_stations(vector<Station> &stations) {
     string name;
     string district;
     string municipality;
@@ -78,23 +78,16 @@ Manager::Manager() {
 
 }
 
-int Manager::maxTrainBetweenStations(const Graph &graph) {
+int Manager::maxTrainBetweenStations() {
     std::string station_a, station_b;
 
-    std::cout << "Station A: ";
-    getline(std::cin, station_a);
+    std::cout << "Station A: " << endl;
+    getline(std::cin >> ws , station_a);
 
-    std::cout << "Station B: ";
-    getline(std::cin, station_b);
+    std::cout << "Station B: " << endl;
+    getline(std::cin >> ws , station_b);
 
-
-
-    int max_trains = graph.edKarp(station_a, station_b);
-
-    if (max_trains == -1) {
-        std::cout << "Invalid stations!\n";
-        return -1;
-    }
+    int max_trains = graph.edmondsKarp2(station_a, station_b);
 
     std::cout << "Max number of trains between " << station_a << " and " << station_b << ": " << max_trains << "\n";
 

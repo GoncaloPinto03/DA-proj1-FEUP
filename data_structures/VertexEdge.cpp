@@ -122,6 +122,7 @@ double const Vertex::getCapacity() {
 }
 
 Vertex::Vertex(Station station1) {
+    this->station = station1;
 }
 
 Station Vertex::getStation() const {
@@ -156,7 +157,7 @@ bool Edge::isSelected() const {
     return this->selected;
 }
 
-double Edge::getFlow() const {
+int Edge::getFlow() const {
     return flow;
 }
 
@@ -168,6 +169,6 @@ void Edge::setReverse(Edge *reverse) {
     this->reverse = reverse;
 }
 
-void Edge::setFlow(double flow) {
+void Edge::setFlow(int flow) {
     this->flow = flow;
 }

@@ -71,7 +71,7 @@ bool Graph::addVertex(Station station) {
         return false;
     vertexSet.push_back(new Vertex(station));
     return true;
-}
+    }
 
 /*
  * Adds an edge to a graph (this), given the contents of the source and
@@ -127,95 +127,160 @@ Graph::Graph() {
 }
 
 
-    int Graph::edKarp(const std::string& source, const std::string& dest) const {
-        auto s = findVertex(source);
-        auto t = findVertex(dest);
-
-        // Check if source and destination are valid
-        if (s == nullptr || t == nullptr || s == t) {
-            return -1;
-        }
-
-        // Reset the flow in the edges
-        for (auto v: vertexSet) {
-            for (auto e: v->getAdj()) {
-                e->setFlow(0);
-            }
-        }
-
-        double maxflow = 0;
-        while (find_augmentigPath(s, t)) {
-            int pathFlow = std::numeric_limits<int>::max();
-
-            // Find the minimum flow in the path
-            for (auto v = t; v != s;) {
-                auto e = v->getPath();
-                if (e->getDest() == v) {
-                    if (pathFlow < e->getWeight() - e->getFlow()) pathFlow = pathFlow;
-                    else pathFlow = e->getWeight() - e->getFlow();
-                    v = e->getOrig();
-                } else {
-                    if (pathFlow < e->getFlow()) pathFlow = pathFlow;
-                    else pathFlow = e->getFlow();
-                    v = e->getDest();
-                }
-            }
-
-            // Update the flow in the path
-            for (auto v = t; v != s;) {
-                auto e = v->getPath();
-                if (e->getDest() == v) {
-                    e->setFlow(e->getFlow() + pathFlow);
-                    v = e->getOrig();
-                } else {
-                    e->setFlow(e->getFlow() - pathFlow);
-                    v = e->getDest();
-                }
-            }
-
-            maxflow += pathFlow;
-        }
-        return maxflow;
-
+void Graph::testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual) {
+    if (! w->isVisited() && residual > 0) {
+        w->setVisited(true);
+        w->setPath(e);
+        q.push(w);
     }
+}
 
-
-bool Graph::find_augmentigPath(Vertex *source, Vertex *dest) const{
-
-    for (auto v: vertexSet) {
+bool Graph::findAugmentingPath(Vertex *s, Vertex *t) {
+    for(auto v : vertexSet) {
         v->setVisited(false);
     }
-
-    source->setVisited(true);
+    s->setVisited(true);
     std::queue<Vertex *> q;
-    q.push(source);
-
-    while (!q.empty() && !dest->isVisited()) {
-        auto v = q.front(); q.pop();
-
-        for (auto e: v->getAdj()) {
-            auto w = e->getDest();
-            if (!w->isVisited() && e->getWeight() - e->getFlow() > 0) {
-                w->setVisited(true);
-                w->setPath(e);
-                q.push(w);
-            }
+    q.push(s);
+    while( ! q.empty() && ! t->isVisited()) {
+        auto v = q.front();
+        q.pop();
+        for(auto e: v->getAdj()) {
+            testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
         }
-
-        for (auto e: v->getIncoming()) {
-            auto w = e->getOrig();
-            if (!w->isVisited() && e->getFlow() > 0) {
-                w->setVisited(true);
-                w->setPath(e);
-                q.push(w);
-            }
+        for(auto e: v->getIncoming()) {
+            testAndVisit(q, e, e->getOrig(), e->getFlow());
         }
     }
+    return t->isVisited();
+}
 
-    return dest->isVisited();
+double Graph::findMinResidualAlongPath(Vertex *s, Vertex *t) {
+    double f = INF;
+    for (auto v = t; v != s; ) {
+        auto e = v->getPath();
+        if (e->getDest() == v) {
+            f = std::min(f, e->getWeight() - e->getFlow());
+            v = e->getOrig();
+        }
+        else {
+            //f = std::min(f, e->getFlow());
+            v = e->getDest();
+        }
+    }
+    return f;
+}
+
+void Graph::augmentFlowAlongPath(Vertex *s, Vertex *t, double f) {
+    for (auto v = t; v != s; ) {
+        auto e = v->getPath();
+        double flow = e->getFlow();
+        if (e->getDest() == v) {
+            e->setFlow(flow + f);
+            v = e->getOrig();
+        }
+        else {
+            e->setFlow(flow - f);
+            v = e->getDest();
+        }
+    }
+}
+
+int Graph::edmondsKarp(std::string source, std::string target) {
+    int result_final=0;
+    Vertex* s = findVertex(source);
+    Vertex* t = findVertex(target);
+    if (s == nullptr || t == nullptr || s == t)
+        throw std::logic_error("Invalid source and/or target vertex");
+
+    // Reset the flows
+    for (auto v : vertexSet) {
+        for (auto e: v->getAdj()) {
+            e->setFlow(0);
+        }
+    }
+    // Loop to find augmentation paths
+    while( findAugmentingPath(s, t) ) {
+        double f = findMinResidualAlongPath(s, t);
+        augmentFlowAlongPath(s, t, f);
+        result_final += f;
+    }
+    return result_final*2;
 }
 
 int Graph::getNumVertex() const{
     return this->vertexSet.size();
 }
 
+int Graph::edmondsKarp2(std::string source, std::string target) {
+    // TODO
+    for(auto v : vertexSet){
+        for(auto e : v->getAdj()){
+            e->setFlow(0);
+        }
+    }
+    double total_flow = 0;
+    while(bfskarp(source, target)){
+        int mrc = INT32_MAX;
+        std::string current_node_id = target;
+        while(current_node_id != source){
+            auto edge = findVertex(current_node_id)->getPath();
+            int residual;
+            if(edge->getDest()->getStation().get_name() == current_node_id){
+                residual = edge->getWeight() - edge->getFlow();
+                current_node_id = edge->getOrig()->getStation().get_name();
+            }
+            else{
+                residual = edge->getFlow();
+                current_node_id = edge->getDest() ->getStation().get_name();
+            }
+            if(residual < mrc) mrc = residual;
+        }
+
+        current_node_id = target;
+        while(current_node_id != source){
+            auto edge = findVertex(current_node_id)->getPath();
+            if(edge->getDest()->getStation().get_name() == current_node_id){
+                edge->setFlow(edge->getFlow() + mrc);
+                current_node_id = edge->getOrig()->getStation().get_name();
+            }
+            else{
+                edge->setFlow(edge->getFlow() - mrc);
+                current_node_id = edge->getDest() ->getStation().get_name();
+            }
+        }
+        total_flow += mrc;
+    }
+    return total_flow;
+}
+bool Graph::bfskarp(std::string source, std::string target) {
+    std::queue<Vertex *> q;
+    for (auto v: vertexSet) {
+        v->setVisited(false);
+        v->setPath(nullptr);
+    }
+    q.push(findVertex(source));
+    q.front()->setVisited(true);
+    while (!q.empty()) {
+        auto v = q.front();
+        q.pop();
+        for (auto e: v->getAdj()) {
+            auto w = e->getDest();
+            if (!w->isVisited() && e->getWeight() - e->getFlow() > 0) {
+                w->setPath(e);
+                w->setVisited(true);
+                q.push(w);
+                if (w->getStation().get_name() == target) return true;
+            }
+        }
+        for (auto e: v->getIncoming()) {
+            auto w = e->getOrig();
+            if (!w->isVisited() && e->getFlow() != 0) {
+                w->setVisited(true);
+                w->setPath(e);
+                q.push(w);
+            }
+        }
+    }
+    return false;
+}

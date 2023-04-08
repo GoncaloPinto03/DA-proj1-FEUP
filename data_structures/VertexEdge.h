@@ -89,10 +89,10 @@ public:
     bool isSelected() const;
     Vertex * getOrig() const;
     Edge *getReverse() const;
-    double getFlow() const;
+    int getFlow() const;
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
-    void setFlow(double flow);
+    void setFlow(int flow);
 protected:
     Vertex * dest; // destination vertex
     double weight; // edge weight, can also be used for capacity
@@ -104,7 +104,7 @@ protected:
     Vertex *orig;
     Edge *reverse = nullptr;
 
-    double flow; // for flow-related problems
+    int flow; // for flow-related problems
 };
 
 #endif /* DA_TP_CLASSES_VERTEX_EDGE */
