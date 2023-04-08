@@ -102,6 +102,11 @@ int Manager::maxTrainBetweenStationsPairs() {
         for (auto j : graph.getVertexSet()){
             if (i != j) {
                 int a = graph.edmondsKarp2(i->getStation().get_name(), j->getStation().get_name());
+                for (auto v : graph.getVertexSet()) {
+                    for (auto e : v->getAdj()) {
+                        e->setFlow(0);
+                    }
+                }
                 if (a > max_trains) {
                     max_trains = a;
                     v1 = i->getStation().get_name();
