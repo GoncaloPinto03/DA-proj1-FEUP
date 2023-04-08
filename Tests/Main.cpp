@@ -20,8 +20,8 @@ int main() {
 
     Graph graph = manager.graph;
 
-    manager.maxTrainBetweenStations();
-    manager.maxTrainBetweenStationsPairs();
+    //manager.maxTrainBetweenStations(); // 2.1
+    manager.maxTrainBetweenStationsPairs(); // 2.2
     Menu menu;
     bool run = true;
     while (run) {

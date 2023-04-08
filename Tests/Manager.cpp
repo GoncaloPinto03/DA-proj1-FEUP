@@ -95,6 +95,7 @@ int Manager::maxTrainBetweenStations() {
 }
 
 int Manager::maxTrainBetweenStationsPairs() {
+    vector<pair<pair<string, string>, int>> max_pairs;
     int max_trains = 0;
     std::string v1;
     std::string v2;
@@ -108,7 +109,15 @@ int Manager::maxTrainBetweenStationsPairs() {
                     }
                 }
                 if (a > max_trains) {
+                    max_pairs.clear();
+                    max_pairs.emplace_back(std::make_pair(i->getStation().get_name(), j->getStation().get_name()), a);
                     max_trains = a;
+                    v1 = i->getStation().get_name();
+                    v2 = j->getStation().get_name();
+                }
+                else if (a == max_trains) {
+                    max_trains = a;
+                    max_pairs.emplace_back(std::make_pair(i->getStation().get_name(), j->getStation().get_name()), a);
                     v1 = i->getStation().get_name();
                     v2 = j->getStation().get_name();
                 }
@@ -116,8 +125,9 @@ int Manager::maxTrainBetweenStationsPairs() {
         }
     }
 
-    std::cout << "Max number of trains between " << v1 << " and " << v2 << ": " << max_trains << "\n";
-
+    for (int i = 0; i < max_pairs.size(); i++) {
+        std::cout << "Max number of trains between " << max_pairs[i].first.first << " and " << max_pairs[i].first.second << ": " << max_pairs[i].second << "\n";
+    }
     return max_trains;
 }
 
