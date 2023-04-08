@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/234/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/233/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/234/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/233/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA"
+CMAKE_SOURCE_DIR = /home/guca/Desktop/Proj1DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/guca/Desktop/Proj1DA/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/PROJ1.dir/clean
 CMakeFiles/PROJ1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PROJ1.dir/build.make CMakeFiles/PROJ1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target PROJ1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target PROJ1"
 .PHONY : CMakeFiles/PROJ1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PROJ1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PROJ1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/PROJ1.dir/rule
 
 # Convenience name for target.

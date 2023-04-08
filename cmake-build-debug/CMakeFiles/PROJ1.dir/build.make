@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/234/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/233/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/234/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/233/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA"
+CMAKE_SOURCE_DIR = /home/guca/Desktop/Proj1DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/guca/Desktop/Proj1DA/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PROJ1.dir/depend.make
@@ -70,144 +70,144 @@ include CMakeFiles/PROJ1.dir/progress.make
 include CMakeFiles/PROJ1.dir/flags.make
 
 CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Main.cpp
+CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Main.cpp
 CMakeFiles/PROJ1.dir/Tests/Main.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Main.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Main.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Main.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Main.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Main.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Main.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Main.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Main.cpp" > CMakeFiles/PROJ1.dir/Tests/Main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Main.cpp > CMakeFiles/PROJ1.dir/Tests/Main.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Main.cpp" -o CMakeFiles/PROJ1.dir/Tests/Main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Main.cpp -o CMakeFiles/PROJ1.dir/Tests/Main.cpp.s
 
 CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Manager.cpp
+CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Manager.cpp
 CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Manager.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Manager.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Manager.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Manager.cpp" > CMakeFiles/PROJ1.dir/Tests/Manager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Manager.cpp > CMakeFiles/PROJ1.dir/Tests/Manager.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Manager.cpp" -o CMakeFiles/PROJ1.dir/Tests/Manager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Manager.cpp -o CMakeFiles/PROJ1.dir/Tests/Manager.cpp.s
 
 CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Network.cpp
+CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Network.cpp
 CMakeFiles/PROJ1.dir/Tests/Network.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Network.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Network.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Network.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Network.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Network.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Network.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Network.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Network.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Network.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Network.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Network.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Network.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Network.cpp" > CMakeFiles/PROJ1.dir/Tests/Network.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Network.cpp > CMakeFiles/PROJ1.dir/Tests/Network.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Network.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Network.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Network.cpp" -o CMakeFiles/PROJ1.dir/Tests/Network.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Network.cpp -o CMakeFiles/PROJ1.dir/Tests/Network.cpp.s
 
 CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/Graph.cpp
+CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o: /home/guca/Desktop/Proj1DA/data_structures/Graph.cpp
 CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Graph.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.o -c /home/guca/Desktop/Proj1DA/data_structures/Graph.cpp
 
 CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Graph.cpp" > CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/data_structures/Graph.cpp > CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.i
 
 CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Graph.cpp" -o CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/data_structures/Graph.cpp -o CMakeFiles/PROJ1.dir/data_structures/Graph.cpp.s
 
 CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/Heap.cpp
+CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o: /home/guca/Desktop/Proj1DA/data_structures/Heap.cpp
 CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Heap.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.o -c /home/guca/Desktop/Proj1DA/data_structures/Heap.cpp
 
 CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Heap.cpp" > CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/data_structures/Heap.cpp > CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.i
 
 CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/Heap.cpp" -o CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/data_structures/Heap.cpp -o CMakeFiles/PROJ1.dir/data_structures/Heap.cpp.s
 
 CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/UFDS.cpp
+CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o: /home/guca/Desktop/Proj1DA/data_structures/UFDS.cpp
 CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/UFDS.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.o -c /home/guca/Desktop/Proj1DA/data_structures/UFDS.cpp
 
 CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/UFDS.cpp" > CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/data_structures/UFDS.cpp > CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.i
 
 CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/UFDS.cpp" -o CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/data_structures/UFDS.cpp -o CMakeFiles/PROJ1.dir/data_structures/UFDS.cpp.s
 
 CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/data_structures/VertexEdge.cpp
+CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o: /home/guca/Desktop/Proj1DA/data_structures/VertexEdge.cpp
 CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/VertexEdge.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o -MF CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o.d -o CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.o -c /home/guca/Desktop/Proj1DA/data_structures/VertexEdge.cpp
 
 CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/VertexEdge.cpp" > CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/data_structures/VertexEdge.cpp > CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.i
 
 CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/data_structures/VertexEdge.cpp" -o CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/data_structures/VertexEdge.cpp -o CMakeFiles/PROJ1.dir/data_structures/VertexEdge.cpp.s
 
 CMakeFiles/PROJ1.dir/Tests/Station.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Station.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Station.cpp
+CMakeFiles/PROJ1.dir/Tests/Station.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Station.cpp
 CMakeFiles/PROJ1.dir/Tests/Station.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Station.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Station.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Station.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Station.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Station.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Station.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Station.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Station.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Station.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Station.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Station.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Station.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Station.cpp" > CMakeFiles/PROJ1.dir/Tests/Station.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Station.cpp > CMakeFiles/PROJ1.dir/Tests/Station.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Station.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Station.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Station.cpp" -o CMakeFiles/PROJ1.dir/Tests/Station.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Station.cpp -o CMakeFiles/PROJ1.dir/Tests/Station.cpp.s
 
 CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Menu.cpp
+CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Menu.cpp
 CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Menu.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Menu.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Menu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Menu.cpp" > CMakeFiles/PROJ1.dir/Tests/Menu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Menu.cpp > CMakeFiles/PROJ1.dir/Tests/Menu.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Menu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Menu.cpp" -o CMakeFiles/PROJ1.dir/Tests/Menu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Menu.cpp -o CMakeFiles/PROJ1.dir/Tests/Menu.cpp.s
 
 CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o: CMakeFiles/PROJ1.dir/flags.make
-CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o: /home/gpinto03/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj1DA/Tests/Auxiliar.cpp
+CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o: /home/guca/Desktop/Proj1DA/Tests/Auxiliar.cpp
 CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o: CMakeFiles/PROJ1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o -c "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Auxiliar.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o -MF CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o.d -o CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o -c /home/guca/Desktop/Proj1DA/Tests/Auxiliar.cpp
 
 CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Auxiliar.cpp" > CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Proj1DA/Tests/Auxiliar.cpp > CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.i
 
 CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests/Auxiliar.cpp" -o CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Proj1DA/Tests/Auxiliar.cpp -o CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.s
 
 # Object files for target PROJ1
 PROJ1_OBJECTS = \
@@ -237,7 +237,7 @@ PROJ1: CMakeFiles/PROJ1.dir/Tests/Menu.cpp.o
 PROJ1: CMakeFiles/PROJ1.dir/Tests/Auxiliar.cpp.o
 PROJ1: CMakeFiles/PROJ1.dir/build.make
 PROJ1: CMakeFiles/PROJ1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PROJ1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PROJ1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PROJ1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -249,6 +249,6 @@ CMakeFiles/PROJ1.dir/clean:
 .PHONY : CMakeFiles/PROJ1.dir/clean
 
 CMakeFiles/PROJ1.dir/depend:
-	cd "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug" "/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/cmake-build-debug/CMakeFiles/PROJ1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/guca/Desktop/Proj1DA/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guca/Desktop/Proj1DA /home/guca/Desktop/Proj1DA /home/guca/Desktop/Proj1DA/cmake-build-debug /home/guca/Desktop/Proj1DA/cmake-build-debug /home/guca/Desktop/Proj1DA/cmake-build-debug/CMakeFiles/PROJ1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/PROJ1.dir/depend
 

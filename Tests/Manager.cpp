@@ -1,4 +1,8 @@
 #include "Manager.h"
+#include <limits>
+#include <queue>
+#include <iostream>
+#include <vector>
 
 void Manager::read_networks(vector<Network> &networks) {
     string stationA;
@@ -94,25 +98,42 @@ int Manager::maxTrainBetweenStations() {
     return max_trains;
 }
 
-int Manager::maxTrainBetweenStationsPairs() {
+vector<pair<std::pair<std::string, std::string>, int>> Manager::maxTrainBetweenStationsPairs() {
+    std::vector<std::pair<std::pair<std::string, std::string>, int>> max_pairs;
     int max_trains = 0;
     std::string v1;
     std::string v2;
     for (auto i : graph.getVertexSet()){
         for (auto j : graph.getVertexSet()){
-            if (i != j) {
-                int a = graph.edmondsKarp2(i->getStation().get_name(), j->getStation().get_name());
+            std::string src=i->getStation().get_name();
+            std::string dest=j->getStation().get_name();
+            if (src != dest) {
+                int a = graph.edmondsKarp2(src,dest);
+                /*for (auto v : graph.getVertexSet())
+                    for (auto e: v->getAdj())
+                        e->setFlow(0);
                 if (a > max_trains) {
                     max_trains = a;
                     v1 = i->getStation().get_name();
                     v2 = j->getStation().get_name();
+                }*/
+                if(a>max_trains){
+                    max_pairs.clear();
+                    max_pairs.push_back(std::make_pair(std::make_pair(src, dest), a));
+                    v1 = src;
+                    v2=dest;
                 }
+                else if (a == max_trains) {
+                    max_pairs.push_back(std::make_pair(std::make_pair(src, dest), a));
+                    v1 = src;
+                    v2=dest;
+                }
+
             }
         }
     }
 
-    std::cout << "Max number of trains between " << v1 << " and " << v2 << ": " << max_trains << "\n";
+    std::cout << max_pairs.size() << "\n";
 
-    return max_trains;
+    return max_pairs;
 }
-

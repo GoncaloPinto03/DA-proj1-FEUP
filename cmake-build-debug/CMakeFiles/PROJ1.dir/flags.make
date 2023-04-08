@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/gpinto03/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj1DA/Tests"
+CXX_INCLUDES = -I/home/guca/Desktop/Proj1DA/Tests
 
 CXX_FLAGS = -g -fdiagnostics-color=always
 
