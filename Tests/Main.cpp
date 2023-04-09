@@ -20,8 +20,18 @@ int main() {
 
     Graph graph = manager.graph;
 
-    manager.maxTrainBetweenStations();
-    manager.maxTrainBetweenStationsPairs();
+    //manager.maxTrainBetweenStations();
+    //manager.maxTrainBetweenStationsPairs();
+
+        string station;
+        cout << "Qual é a estação?" << endl;
+        getline(cin,station);
+
+
+        int re = manager.maxTrainsArrivingAtStation(station);
+        cout << re << endl;
+
+
     Menu menu;
     bool run = true;
     while (run) {

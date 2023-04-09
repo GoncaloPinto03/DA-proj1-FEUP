@@ -23,6 +23,9 @@ public:
     int maxTrainBetweenStations();
     vector<pair<std::pair<std::string, std::string>, int>> maxTrainBetweenStationsPairs();
 
+    int maxTrainsArrivingAtStation(const string &arrivingStation);
+
+    void test();
 };
 
 #endif //PROJ1_READ_FILES_H

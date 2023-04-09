@@ -137,3 +137,28 @@ vector<pair<std::pair<std::string, std::string>, int>> Manager::maxTrainBetweenS
 
     return max_pairs;
 }
+
+
+
+int Manager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
+    std::vector<std::string> stat;
+    Station station("st", "none", "none", "none", "none");
+    graph.addVertex(station);
+    for (auto s: graph.getVertexSet()) {
+        if (s->getAdj().size() == 1 && (s->getStation().get_name() != arrivingStation) && (s->getStation().get_name()!=station.get_name()))
+            stat.push_back(s->getStation().get_name());
+    }
+    for (auto stname : stat){
+        graph.addEdge("st", stname, 10000000000);
+    }
+    for (auto stname : stat){
+    }
+
+        double result = graph.edmondsKarp2("st", arrivingStation);
+        result /= 2;
+        return result;
+}
+
+
+
+

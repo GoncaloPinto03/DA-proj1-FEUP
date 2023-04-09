@@ -21,7 +21,6 @@ class Edge;
 class Vertex {
 public:
     Vertex();
-    //Vertex(int id);
     Vertex(Station station);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
@@ -48,7 +47,7 @@ public:
 
     friend class MutablePriorityQueue<Vertex>;
 
-    Edge *addEdge(Vertex *d, double w);
+    Edge *addEdge(Vertex *d, int w);
 
 protected:
     Station station;
@@ -82,7 +81,8 @@ protected:
 class Edge {
 public:
     Edge();
-    Edge(Vertex *orig, Vertex *dest, double w);
+    Edge(Vertex *orig, Vertex *dest, int w);
+
 
     Vertex * getDest() const;
     double getWeight() const;

@@ -15,6 +15,7 @@ class Graph {
 public:
 
     Graph();
+
     // Graph(int nrVertex);
     /*
     * Auxiliary function to find a vertex with a given ID.
@@ -50,9 +51,9 @@ public:
      */
 
 
-    bool addBidirectionalEdge(const std::string& source, const std::string& dest, double w);
+    bool addBidirectionalEdge(const std::string& source, const std::string& dest, int w);
 
-    bool addEdge(const std::string& source, const std::string& dest, double w);
+    bool addEdge(const std::string& source, const std::string& dest, int w);
 
 
     int getNumVertex() const;
@@ -96,6 +97,7 @@ protected:
 
     double findMinResidualAlongPath(Vertex *s, Vertex *t);
 
+    bool removeEdge(Station destStation);
 };
 
 void deleteMatrix(int **m, int n);

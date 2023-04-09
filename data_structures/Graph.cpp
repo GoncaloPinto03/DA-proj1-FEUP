@@ -71,14 +71,14 @@ bool Graph::addVertex(Station station) {
         return false;
     vertexSet.push_back(new Vertex(station));
     return true;
-    }
+}
 
 /*
  * Adds an edge to a graph (this), given the contents of the source and
  * destination vertices and the edge weight (w).
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
-bool Graph::addEdge(const std::string& source, const std::string& dest, double w) {
+bool Graph::addEdge(const std::string& source, const std::string& dest, int w) {
     auto v1 = findVertex(source);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
@@ -89,7 +89,11 @@ bool Graph::addEdge(const std::string& source, const std::string& dest, double w
 
 
 
-bool Graph::addBidirectionalEdge(const std::string& source, const std::string& dest, double w) {
+
+
+
+
+bool Graph::addBidirectionalEdge(const std::string& source, const std::string& dest, int w) {
     auto v1 = findVertex(source);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
